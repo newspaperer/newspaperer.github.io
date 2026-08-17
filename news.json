@@ -2,265 +2,161 @@
   {
     "id": 1,
     "source": {
-      "name": "Интерьерные Решения Воронеж",
-      "nick": "vrn_design",
-      "avatar_url": "https://i.pravatar.cc/150?img=11",
+      "name": "РИА Новости",
+      "nick": "rianovosti",
+      "avatar_url": "https://i.pravatar.cc/150?img=1",
       "color": "#1a73e8",
-      "sub": "Локальный медиа"
+      "sub": "СМИ"
     },
-    "title": "Оксана Пирко показала новый проект в ЖК BIK TOWER",
-    "description": "Дизайнер Оксана Пирко представила интерьер квартиры с панорамным видом: акцент на натуральные материалы и зонирование без глухих перегородок.",
-    "image_url": "https://images.unsplash.com/photo-1581091226825-a6a2a5a9c5b3?w=600",
-    "emoji": "🛋️",
+    "title": "Путин подписал закон о запрете на въезд в РФ для мигрантов с непогашенной судимостью",
+    "description": "Президент России подписал закон, усиливающий миграционный контроль. Теперь иностранцы с непогашенной судимостью не смогут въехать в страну.",
+    "image_url": "https://images.unsplash.com/photo-1541872707-1bfbc7b49940?w=600",
+    "emoji": "📜",
     "gradient": "linear-gradient(135deg, #1a73e8, #4a9af5)",
-    "tag": "Дизайн"
+    "tag": "Политика"
   },
   {
     "id": 2,
     "source": {
-      "name": "Студия Ольги Пустоваловой",
-      "nick": "pustovalova_design",
-      "avatar_url": "https://i.pravatar.cc/150?img=12",
+      "name": "ТАСС",
+      "nick": "tass",
+      "avatar_url": "https://i.pravatar.cc/150?img=2",
       "color": "#d32f2f",
-      "sub": "Студия"
+      "sub": "СМИ"
     },
-    "title": "Ольга Пустовалова: как зонировать маленькую спальню",
-    "description": "В новом кейсе дизайнер показала, как выделить зону сна и хранения в комнате 12 м²: скрытые системы, текстиль и свет как главный инструмент.",
-    "image_url": "https://images.unsplash.com/photo-1560307281-b7a8c7b6a7d1?w=600",
-    "emoji": "🛏️",
+    "title": "В Москве задержана банда мошенников, обманувших пенсионеров на 15 млн рублей",
+    "description": "Злоумышленники представлялись социальными работниками и под предлогом замены счетчиков похищали деньги у пожилых граждан.",
+    "image_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600",
+    "emoji": "🚨",
     "gradient": "linear-gradient(135deg, #d32f2f, #f44336)",
-    "tag": "Практики"
+    "tag": "Происшествия"
   },
   {
     "id": 3,
     "source": {
-      "name": "Академия дверей | Максим Меньших",
-      "nick": "max_menshikh_doors",
-      "avatar_url": "https://i.pravatar.cc/150?img=13",
+      "name": "Интерфакс",
+      "nick": "interfax",
+      "avatar_url": "https://i.pravatar.cc/150?img=3",
       "color": "#2e7d32",
-      "sub": "Салон"
+      "sub": "СМИ"
     },
-    "title": "Максим Меньших: тренды межкомнатных дверей 2026",
-    "description": "Эксперт Максим Меньших рассказал, какие полотна и системы открывания выбирают для современных интерьеров Воронежа: скрытые двери, раздвижные перегородки и экоматериалы.",
-    "image_url": "https://images.unsplash.com/photo-1542319247-c8a0c5e8b9a2?w=600",
-    "emoji": "🚪",
+    "title": "Курс доллара опустился ниже 90 рублей впервые за три недели",
+    "description": "На Московской бирже курс американской валюты снизился до 89,7 рубля. Эксперты связывают это с ростом цен на нефть.",
+    "image_url": "https://images.unsplash.com/photo-1563013544-7b49b3a1c0a3?w=600",
+    "emoji": "💵",
     "gradient": "linear-gradient(135deg, #2e7d32, #43a047)",
-    "tag": "Материалы"
+    "tag": "Экономика"
   },
   {
     "id": 4,
     "source": {
-      "name": "Воронежский строительный вестник",
-      "nick": "vrn_stroy_vest",
-      "avatar_url": "https://i.pravatar.cc/150?img=14",
+      "name": "Коммерсантъ",
+      "nick": "kommersant",
+      "avatar_url": "https://i.pravatar.cc/150?img=4",
       "color": "#1565c0",
-      "sub": "Отраслевое СМИ"
+      "sub": "СМИ"
     },
-    "title": "Старт продаж в ЖК «Крона парк»: планировки и отделка",
-    "description": "Застройщик анонсировал старт продаж в новом ЖК: представлены варианты планировок с гардеробными и кухнями-гостиными, а также опции предчистовой отделки.",
-    "image_url": "https://images.unsplash.com/photo-1618221389890-b8d5e3c1a7f2?w=600",
-    "emoji": "🏠",
+    "title": "Сборная России по футболу обыграла Казахстан со счётом 3:1",
+    "description": "В товарищеском матче сборная России одержала уверенную победу. Голы забили Смолов, Миранчук и Бакаев.",
+    "image_url": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600",
+    "emoji": "⚽",
     "gradient": "linear-gradient(135deg, #1565c0, #42a5f5)",
-    "tag": "ЖК"
+    "tag": "Спорт"
   },
   {
     "id": 5,
     "source": {
-      "name": "Мой бизнес | Воронеж",
-      "nick": "mybusiness_vrn",
-      "avatar_url": "https://i.pravatar.cc/150?img=15",
+      "name": "Московский комсомолец",
+      "nick": "mk",
+      "avatar_url": "https://i.pravatar.cc/150?img=5",
       "color": "#6a1b9a",
-      "sub": "Госплатформа"
+      "sub": "СМИ"
     },
-    "title": "Семинар для дизайнеров: как презентовать проект заказчику",
-    "description": "Центр «Мой бизнес» проводит бесплатный семинар для дизайнеров Воронежа: разбор подачи визуализаций, сметы и этапов реализации.",
-    "image_url": "https://images.unsplash.com/photo-1554289128-1d7e3d4a7b8c?w=600",
-    "emoji": "📚",
+    "title": "В Санкт-Петербурге открылся новый культурный центр «Арт-Порт»",
+    "description": "На набережной Невы начал работу современный выставочный комплекс с экспозициями российских и зарубежных художников.",
+    "image_url": "https://images.unsplash.com/photo-1545989253-02cc26577f88?w=600",
+    "emoji": "🎨",
     "gradient": "linear-gradient(135deg, #6a1b9a, #ab47bc)",
-    "tag": "События"
+    "tag": "Культура"
   },
   {
     "id": 6,
     "source": {
-      "name": "ГК «Развитие»",
-      "nick": "gk_razvitie",
-      "avatar_url": "https://i.pravatar.cc/150?img=16",
+      "name": "РБК",
+      "nick": "rbc",
+      "avatar_url": "https://i.pravatar.cc/150?img=6",
       "color": "#e65100",
-      "sub": "Застройщик"
+      "sub": "СМИ"
     },
-    "title": "Благоустройство дворов в новых кварталах: интервью с ГК «Развитие»",
-    "description": "Представитель застройщика рассказал о подходах к благоустройству: озеленение, детские площадки и зоны отдыха для разных возрастов.",
-    "image_url": "https://images.unsplash.com/photo-1579546929518-9b74f8e5c6d7?w=600",
-    "emoji": "🌳",
+    "title": "В Ростовской области автобус столкнулся с грузовиком: 8 пострадавших",
+    "description": "ДТП произошло на трассе М-4. Все пострадавшие доставлены в больницу. На месте работают экстренные службы.",
+    "image_url": "https://images.unsplash.com/photo-1594237584314-7e73ba4e60de?w=600",
+    "emoji": "🚌",
     "gradient": "linear-gradient(135deg, #e65100, #ff9800)",
-    "tag": "Застройщики"
+    "tag": "Происшествия"
   },
   {
     "id": 7,
     "source": {
-      "name": "Интерьерный дайджест | Воронеж",
-      "nick": "vrn_interior_digest",
-      "avatar_url": "https://i.pravatar.cc/150?img=17",
+      "name": "Известия",
+      "nick": "izvestia",
+      "avatar_url": "https://i.pravatar.cc/150?img=7",
       "color": "#00838f",
-      "sub": "Медиа"
+      "sub": "СМИ"
     },
-    "title": "5 ошибок при планировании кухни-гостиной",
-    "description": "Разбираем частые ошибки: неправильная расстановка техники, отсутствие зон хранения, неудачное освещение и другие нюансы, которые портят пространство.",
-    "image_url": "https://images.unsplash.com/photo-1545167266-b58c39d7a7e0?w=600",
-    "emoji": "🍳",
+    "title": "Минпросвещения анонсировало изменения в ЕГЭ и введение нового предмета",
+    "description": "В 2027 году планируется ввести в школах предмет «Основы инженерии» и изменить структуру экзаменов.",
+    "image_url": "https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=600",
+    "emoji": "📚",
     "gradient": "linear-gradient(135deg, #00838f, #26c6da)",
-    "tag": "Практики"
+    "tag": "Общество"
   },
   {
     "id": 8,
     "source": {
-      "name": "Премия «Дизайнер года Черноземья»",
-      "nick": "design_award_chernozem",
-      "avatar_url": "https://i.pravatar.cc/150?img=18",
+      "name": "Ведомости",
+      "nick": "vedomosti",
+      "avatar_url": "https://i.pravatar.cc/150?img=8",
       "color": "#c62828",
-      "sub": "Конкурс"
+      "sub": "СМИ"
     },
-    "title": "Объявлены номинанты премии «Дизайнер года Черноземья»",
-    "description": "Среди номинантов — проекты Оксаны Пирко, Ольги Пустоваловой и других известных студий региона. Голосование открыто до конца месяца.",
-    "image_url": "https://images.unsplash.com/photo-1534161348400-f2fedb962e3b?w=600",
-    "emoji": "🏆",
+    "title": "Акции Tesla упали на 12% после отчёта о прибыли",
+    "description": "Компания Илона Маска показала снижение доходов из-за падения спроса на электромобили в Китае.",
+    "image_url": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600",
+    "emoji": "📉",
     "gradient": "linear-gradient(135deg, #c62828, #ef5350)",
-    "tag": "События"
+    "tag": "Экономика"
   },
   {
     "id": 9,
     "source": {
-      "name": "Мебельный салон «АртМебель»",
-      "nick": "artmebel_vrn",
-      "avatar_url": "https://i.pravatar.cc/150?img=19",
+      "name": "Газета.Ru",
+      "nick": "gazetaru",
+      "avatar_url": "https://i.pravatar.cc/150?img=9",
       "color": "#e91e63",
-      "sub": "Магазин"
+      "sub": "СМИ"
     },
-    "title": "Коллаборация салона «АртМебель» и студии дизайна",
-    "description": "Совместный проект: готовые интерьерные решения с мебелью из новой коллекции. В подборке — варианты для студий и квартир в новостройках.",
-    "image_url": "https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=600",
-    "emoji": "🪑",
+    "title": "Ольга Бузова анонсировала новый альбом и тур по городам России",
+    "description": "Певица и телеведущая рассказала о работе над новым студийным альбомом, выход которого запланирован на осень.",
+    "image_url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
+    "emoji": "🎵",
     "gradient": "linear-gradient(135deg, #e91e63, #f06292)",
-    "tag": "Партнёрства"
+    "tag": "Шоу-бизнес"
   },
   {
     "id": 10,
     "source": {
-      "name": "ЖК «Флора»",
-      "nick": "jk_flora_vrn",
-      "avatar_url": "https://i.pravatar.cc/150?img=20",
+      "name": "Lenta.ru",
+      "nick": "lenta",
+      "avatar_url": "https://i.pravatar.cc/150?img=10",
       "color": "#283593",
-      "sub": "ЖК"
+      "sub": "СМИ"
     },
-    "title": "Ход строительства ЖК «Флора»: новые фото и сроки сдачи",
-    "description": "На площадке завершены монолитные работы в корпусе 3. Опубликованы рендеры общественных зон и варианты отделки входных групп.",
-    "image_url": "https://images.unsplash.com/photo-1594237584314-7e73ba4e60de?w=600",
-    "emoji": "🏗️",
+    "title": "В Дели открылся первый в мире музей, созданный при помощи ИИ",
+    "description": "Экспозиция включает интерактивные инсталляции и произведения искусства, сгенерированные нейросетями.",
+    "image_url": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=600",
+    "emoji": "🤖",
     "gradient": "linear-gradient(135deg, #283593, #5c6bc0)",
-    "tag": "ЖК"
-  },
-  {
-    "id": 11,
-    "source": {
-      "name": "Интерьерные Решения Воронеж",
-      "nick": "vrn_design",
-      "avatar_url": "https://i.pravatar.cc/150?img=11",
-      "color": "#1a73e8",
-      "sub": "Локальный медиа"
-    },
-    "title": "Как зонировать студию без потери света",
-    "description": "Разбор реального проекта: стеклянные перегородки, реечные панели, текстиль и продуманное освещение помогают разделить пространство и сохранить ощущение воздуха.",
-    "image_url": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600",
-    "emoji": "💡",
-    "gradient": "linear-gradient(135deg, #1a73e8, #4a9af5)",
-    "tag": "Практики"
-  },
-  {
-    "id": 12,
-    "source": {
-      "name": "Студия Ольги Пустоваловой",
-      "nick": "pustovalova_design",
-      "avatar_url": "https://i.pravatar.cc/150?img=12",
-      "color": "#d32f2f",
-      "sub": "Студия"
-    },
-    "title": "Новый проект Ольги Пустоваловой: квартира в стиле «тихая роскошь»",
-    "description": "Минималистичный интерьер с тактильными материалами и спокойной палитрой. Акцент на деталях и функциональности.",
-    "image_url": "https://images.unsplash.com/photo-1541872707-1bfbc7b49940?w=600",
-    "emoji": "🎨",
-    "gradient": "linear-gradient(135deg, #d32f2f, #f44336)",
-    "tag": "Дизайн"
-  },
-  {
-    "id": 13,
-    "source": {
-      "name": "Академия дверей | Максим Меньших",
-      "nick": "max_menshikh_doors",
-      "avatar_url": "https://i.pravatar.cc/150?img=13",
-      "color": "#2e7d32",
-      "sub": "Салон"
-    },
-    "title": "Скрытые двери: как выбрать и где применять",
-    "description": "Максим Меньших объясняет, когда скрытые двери уместны, какие бывают варианты покрытия и как избежать ошибок при монтаже.",
-    "image_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600",
-    "emoji": "🚪",
-    "gradient": "linear-gradient(135deg, #2e7d32, #43a047)",
-    "tag": "Материалы"
-  },
-  {
-    "id": 14,
-    "source": {
-      "name": "Воронежский строительный вестник",
-      "nick": "vrn_stroy_vest",
-      "avatar_url": "https://i.pravatar.cc/150?img=14",
-      "color": "#1565c0",
-      "sub": "Отраслевое СМИ"
-    },
-    "title": "Обзор новых ЖК Воронежа: где искать квартиры с готовой планировкой",
-    "description": "Подборка жилых комплексов, где застройщик предлагает варианты планировок под разные сценарии жизни: семьи, одиночки, аренда.",
-    "image_url": "https://images.unsplash.com/photo-1563013544-7b49b3a1c0a3?w=600",
-    "emoji": "🏙️",
-    "gradient": "linear-gradient(135deg, #1565c0, #42a5f5)",
-    "tag": "ЖК"
-  },
-  {
-    "id": 15,
-    "source": {
-      "name": "Мой бизнес | Воронеж",
-      "nick": "mybusiness_vrn",
-      "avatar_url": "https://i.pravatar.cc/150?img=15",
-      "color": "#6a1b9a",
-      "sub": "Госплатформа"
-    },
-    "title": "Гранты и поддержка для локальных дизайн-студий",
-    "description": "Центр «Мой бизнес» рассказал о мерах поддержки для предпринимателей в сфере дизайна: субсидии, обучение, продвижение.",
-    "image_url": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600",
-    "emoji": "💰",
-    "gradient": "linear-gradient(135deg, #6a1b9a, #ab47bc)",
-    "tag": "Общество"
-  },
-  {
-    "id": 16,
-    "source": {
-      "name": "Интерьерный дайджест | Воронеж",
-      "nick": "vrn_interior_digest",
-      "avatar_url": "https://i.pravatar.cc/150?img=17",
-      "color": "#00838f",
-      "sub": "Медиа"
-    },
-    "title": "Тренды в освещении 2026: что выбирают дизайнеры Воронежа",
-    "description": "Акцентные светильники, трековые системы, скрытая подсветка и управление светом через сценарии — разбираем актуальные решения.",
-    "image_url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
-    "emoji": "💡",
-    "gradient": "linear-gradient(135deg, #00838f, #26c6da)",
-    "tag": "Тренды"
-  },
-  {
-    "id": 17,
-    "source": {
-      "name": "ТЦ «Центральный»",
-      "nick": "tc_centralny",
-      "avatar_url": "https://i.pravatar.cc/150?img=21",
-      "color": "#c62828",
-      "sub": "Ритейл"}}
-  
+    "tag": "Технологии"
+  }
+]
