@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "source": {
+      "name": "Новости космоса",
+      "nick": "space_news",
+      "avatar_url": "https://i.pravatar.cc/150?img=1",
+      "color": "#1a5f9e",
+      "sub": "Наука"
+    },
+    "title": "На Марсе нашли следы жизни",
+    "description": "Марсоход Perseverance обнаружил органические молекулы в древних отложениях кратера Езеро. Это может быть первым доказательством существования микробной жизни на красной планете.",
+    "image_url": "https://images.unsplash.com/photo-1614728894754-3d1a1a3e3e3e?w=600",
+    "emoji": "🪐",
+    "gradient": "linear-gradient(135deg, #1a5f9e, #2d8bcb)",
+    "tag": "Наука"
+  },
+  {
+    "id": 2,
+    "source": {
+      "name": "Политика сегодня",
+      "nick": "polit_today",
+      "avatar_url": "https://i.pravatar.cc/150?img=2",
+      "color": "#cc0000",
+      "sub": "Политика"
+    },
+    "title": "Россия и Индия подписали соглашение о совместном освоении Арктики",
+    "description": "Стороны договорились о создании совместной рабочей группы по изучению шельфа и разработке технологий для работы в условиях крайнего Севера.",
+    "image_url": "https://images.unsplash.com/photo-1620012253295-c15f4166a4b6?w=600",
+    "emoji": "❄️",
+    "gradient": "linear-gradient(135deg, #1a3a5c, #3a6a8c)",
+    "tag": "Политика"
+  },
+  {
+    "id": 3,
+    "source": {
+      "name": "Шоу-бизнес",
+      "nick": "show_biz",
+      "avatar_url": "https://i.pravatar.cc/150?img=3",
+      "color": "#ff2d7a",
+      "sub": "Светская хроника"
+    },
+    "title": "Егор Крид выпустил клип с тигренком",
+    "description": "Певец представил новый музыкальный видеоролик, в котором главную роль сыграл маленький тигренок. Фанаты в восторге от необычного формата.",
+    "image_url": "https://images.unsplash.com/photo-1549488497-6b8efb952e3c?w=600",
+    "emoji": "🐯",
+    "gradient": "linear-gradient(135deg, #cc7722, #ffaa44)",
+    "tag": "Музыка"
+  },
+  {
+    "id": 4,
+    "source": {
+      "name": "Новости мира",
+      "nick": "world_news",
+      "avatar_url": "https://i.pravatar.cc/150?img=4",
+      "color": "#0077be",
+      "sub": "СМИ"
+    },
+    "title": "Учёные создали искусственный фотосинтез с КПД 25%",
+    "description": "Команда из Стэнфорда разработала систему, которая превращает солнечный свет в топливо с эффективностью, превышающей природную в 3 раза.",
+    "image_url": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600",
+    "emoji": "☀️",
+    "gradient": "linear-gradient(135deg, #e67e22, #f39c12)",
+    "tag": "Технологии"
+  }
+]
