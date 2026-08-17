@@ -3,17 +3,17 @@
     "id": 1,
     "source": {
       "name": "Wilsacom",
-      "nick": "rianovosti",
+      "nick": "wilsacom",
       "avatar_url": "https://img.championat.com/CTRLVvqdR_UzWPrusKgYFhDerbg3OUylts9C5BkD2ps/p()/news/big/w/d/skladnoj-iphone-ultra-sperva-vyjdet-tolko-v-ssha-smi_1786702939750842595.jpg",
       "color": "#1a73e8",
       "sub": "СМИ"
     },
-    "title": "Складной IPhone Ultra появится на прилавках какус стор",
-    "description": "Президент России подписал закон, усиливающий миграционный контроль. Теперь иностранцы с непогашенной судимостью не смогут въехать в страну.",
-    "image_url": "https://images.unsplash.com/photo-1541872707-1bfbc7b49940?w=600",
-    "emoji": "📜",
+    "title": "📱 Складной iPhone Ultra: дата выхода и цена",
+    "description": "Складной iPhone Ultra появится в США в ноябре 2026. Цена — от $2000. В России — через полгода.",
+    "image_url": "https://images.unsplash.com/photo-1596551293262-1b37da4e8b0f?w=600",
+    "emoji": "📱",
     "gradient": "linear-gradient(135deg, #1a73e8, #4a9af5)",
-    "tag": "Политика"
+    "tag": "Технологии"
   },
   {
     "id": 2,
@@ -24,9 +24,9 @@
       "color": "#d32f2f",
       "sub": "СМИ"
     },
-    "title": "В Москве задержана банда мошенников, обманувших пенсионеров на 15 млн рублей",
-    "description": "Злоумышленники представлялись социальными работниками и под предлогом замены счетчиков похищали деньги у пожилых граждан.",
-    "image_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600",
+    "title": "🚨 Задержана банда, обманувшая пенсионеров на 15 млн рублей",
+    "description": "В Москве задержаны мошенники, которые под видом соцработников похищали деньги у пожилых людей.",
+    "image_url": "https://images.unsplash.com/photo-1543165362-7d28d6e59307?w=600",
     "emoji": "🚨",
     "gradient": "linear-gradient(135deg, #d32f2f, #f44336)",
     "tag": "Происшествия"
@@ -40,8 +40,8 @@
       "color": "#2e7d32",
       "sub": "СМИ"
     },
-    "title": "Курс доллара опустился ниже 90 рублей впервые за три недели",
-    "description": "На Московской бирже курс американской валюты снизился до 89,7 рубля. Эксперты связывают это с ростом цен на нефть.",
+    "title": "💵 Курс доллара опустился до 89,7 рубля",
+    "description": "Впервые за три недели курс доллара упал ниже 90 рублей. Эксперты связывают это с ростом цен на нефть.",
     "image_url": "https://images.unsplash.com/photo-1563013544-7b49b3a1c0a3?w=600",
     "emoji": "💵",
     "gradient": "linear-gradient(135deg, #2e7d32, #43a047)",
@@ -56,8 +56,8 @@
       "color": "#1565c0",
       "sub": "СМИ"
     },
-    "title": "Сборная России по футболу обыграла Казахстан со счётом 3:1",
-    "description": "В товарищеском матче сборная России одержала уверенную победу. Голы забили Смолов, Миранчук и Бакаев.",
+    "title": "⚽ Сборная России разгромила Казахстан 3:1",
+    "description": "В товарищеском матче наша команда уверенно победила. Голы забили Смолов, Миранчук и Бакаев.",
     "image_url": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600",
     "emoji": "⚽",
     "gradient": "linear-gradient(135deg, #1565c0, #42a5f5)",
@@ -72,9 +72,9 @@
       "color": "#6a1b9a",
       "sub": "СМИ"
     },
-    "title": "В Санкт-Петербурге открылся новый культурный центр «Арт-Порт»",
-    "description": "На набережной Невы начал работу современный выставочный комплекс с экспозициями российских и зарубежных художников.",
-    "image_url": "https://images.unsplash.com/photo-1545989253-02cc26577f88?w=600",
+    "title": "🎨 В Питере открылся «Арт-Порт» — новый культурный центр",
+    "description": "На набережной Невы начал работу современный выставочный комплекс с работами российских и зарубежных художников.",
+    "image_url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=600",
     "emoji": "🎨",
     "gradient": "linear-gradient(135deg, #6a1b9a, #ab47bc)",
     "tag": "Культура"
@@ -88,8 +88,8 @@
       "color": "#e65100",
       "sub": "СМИ"
     },
-    "title": "В Ростовской области автобус столкнулся с грузовиком: 8 пострадавших",
-    "description": "ДТП произошло на трассе М-4. Все пострадавшие доставлены в больницу. На месте работают экстренные службы.",
+    "title": "🚌 ДТП на М-4: автобус столкнулся с грузовиком",
+    "description": "В Ростовской области столкнулись автобус и грузовик. 8 человек пострадали, все доставлены в больницу.",
     "image_url": "https://images.unsplash.com/photo-1594237584314-7e73ba4e60de?w=600",
     "emoji": "🚌",
     "gradient": "linear-gradient(135deg, #e65100, #ff9800)",
@@ -104,8 +104,8 @@
       "color": "#00838f",
       "sub": "СМИ"
     },
-    "title": "Минпросвещения анонсировало изменения в ЕГЭ и введение нового предмета",
-    "description": "В 2027 году планируется ввести в школах предмет «Основы инженерии» и изменить структуру экзаменов.",
+    "title": "📚 В школах введут новый предмет «Основы инженерии»",
+    "description": "С 2027 года в школах появится новый предмет. Также изменятся структура ЕГЭ и экзаменационные форматы.",
     "image_url": "https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=600",
     "emoji": "📚",
     "gradient": "linear-gradient(135deg, #00838f, #26c6da)",
@@ -120,8 +120,8 @@
       "color": "#c62828",
       "sub": "СМИ"
     },
-    "title": "Акции Tesla упали на 12% после отчёта о прибыли",
-    "description": "Компания Илона Маска показала снижение доходов из-за падения спроса на электромобили в Китае.",
+    "title": "📉 Акции Tesla рухнули на 12%",
+    "description": "Компания Илона Маска потеряла в цене из-за падения спроса на электромобили в Китае.",
     "image_url": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600",
     "emoji": "📉",
     "gradient": "linear-gradient(135deg, #c62828, #ef5350)",
@@ -136,9 +136,9 @@
       "color": "#e91e63",
       "sub": "СМИ"
     },
-    "title": "Ольга Бузова анонсировала новый альбом и тур по городам России",
-    "description": "Певица и телеведущая рассказала о работе над новым студийным альбомом, выход которого запланирован на осень.",
-    "image_url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
+    "title": "🎵 Ольга Бузова анонсировала новый альбом и тур",
+    "description": "Певица и телеведущая выпускает новый альбом осенью и отправляется в тур по России.",
+    "image_url": "https://images.unsplash.com/photo-1493225255756-9587f71e3dd7?w=600",
     "emoji": "🎵",
     "gradient": "linear-gradient(135deg, #e91e63, #f06292)",
     "tag": "Шоу-бизнес"
@@ -152,11 +152,171 @@
       "color": "#283593",
       "sub": "СМИ"
     },
-    "title": "В Дели открылся первый в мире музей, созданный при помощи ИИ",
-    "description": "Экспозиция включает интерактивные инсталляции и произведения искусства, сгенерированные нейросетями.",
+    "title": "🤖 В Дели открылся музей, созданный ИИ",
+    "description": "Первый в мире музей, где экспонаты сгенерированы нейросетями. Интерактивные инсталляции и цифровое искусство.",
     "image_url": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=600",
     "emoji": "🤖",
     "gradient": "linear-gradient(135deg, #283593, #5c6bc0)",
     "tag": "Технологии"
+  },
+  {
+    "id": 11,
+    "source": {
+      "name": "Wilsacom",
+      "nick": "wilsacom",
+      "avatar_url": "https://img.championat.com/CTRLVvqdR_UzWPrusKgYFhDerbg3OUylts9C5BkD2ps/p()/news/big/w/d/skladnoj-iphone-ultra-sperva-vyjdet-tolko-v-ssha-smi_1786702939750842595.jpg",
+      "color": "#1a73e8",
+      "sub": "СМИ"
+    },
+    "title": "🌍 Прогноз погоды на неделю: тепло, но дождливо",
+    "description": "В Москве и области ожидается до +25°C в выходные, но возможны кратковременные дожди. В Питере — прохладнее, до +18°C.",
+    "image_url": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600",
+    "emoji": "☀️",
+    "gradient": "linear-gradient(135deg, #f39c12, #e67e22)",
+    "tag": "Погода"
+  },
+  {
+    "id": 12,
+    "source": {
+      "name": "ТАСС",
+      "nick": "tass",
+      "avatar_url": "https://i.pravatar.cc/150?img=2",
+      "color": "#d32f2f",
+      "sub": "СМИ"
+    },
+    "title": "🎬 Квентин Тарантино снимет новый фильм о России",
+    "description": "Режиссёр объявил о съёмках фильма «Русская душа» с бюджетом $150 млн. В главных ролях — звёзды Голливуда.",
+    "image_url": "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=600",
+    "emoji": "🎬",
+    "gradient": "linear-gradient(135deg, #1a1a3a, #4a4a7a)",
+    "tag": "Кино"
+  },
+  {
+    "id": 13,
+    "source": {
+      "name": "Интерфакс",
+      "nick": "interfax",
+      "avatar_url": "https://i.pravatar.cc/150?img=3",
+      "color": "#2e7d32",
+      "sub": "СМИ"
+    },
+    "title": "💥 Новая звезда в созвездии Ориона? Астрономы в шоке",
+    "description": "Астрономы заметили необычайно яркую звезду в созвездии Ориона. Учёные предполагают, что это может быть сверхновая или новая планета.",
+    "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=600",
+    "emoji": "🌟",
+    "gradient": "linear-gradient(135deg, #1a1a3a, #4a4a7a)",
+    "tag": "Наука"
+  },
+  {
+    "id": 14,
+    "source": {
+      "name": "Коммерсантъ",
+      "nick": "kommersant",
+      "avatar_url": "https://i.pravatar.cc/150?img=4",
+      "color": "#1565c0",
+      "sub": "СМИ"
+    },
+    "title": "🏡 ЖК «Флора»: новые рендеры и сроки сдачи",
+    "description": "Застройщик опубликовал новые визуализации общественных зон ЖК «Флора». Сдача корпуса 3 запланирована на март 2027.",
+    "image_url": "https://images.unsplash.com/photo-1618221389890-b8d5e3c1a7f2?w=600",
+    "emoji": "🏡",
+    "gradient": "linear-gradient(135deg, #1565c0, #42a5f5)",
+    "tag": "Недвижимость"
+  },
+  {
+    "id": 15,
+    "source": {
+      "name": "Московский комсомолец",
+      "nick": "mk",
+      "avatar_url": "https://i.pravatar.cc/150?img=5",
+      "color": "#6a1b9a",
+      "sub": "СМИ"
+    },
+    "title": "🎭 Театр «Современник» представил новую постановку",
+    "description": "Премьера спектакля «Чайка» в современной интерпретации состоялась в Москве. Билеты раскуплены на месяц вперёд.",
+    "image_url": "https://images.unsplash.com/photo-1507924538820-4f0ffb9ff0f0?w=600",
+    "emoji": "🎭",
+    "gradient": "linear-gradient(135deg, #6a1b9a, #ab47bc)",
+    "tag": "Культура"
+  },
+  {
+    "id": 16,
+    "source": {
+      "name": "РБК",
+      "nick": "rbc",
+      "avatar_url": "https://i.pravatar.cc/150?img=6",
+      "color": "#e65100",
+      "sub": "СМИ"
+    },
+    "title": "🚀 SpaceX запустила новую ракету с 24 спутниками",
+    "description": "Компания Илона Маска успешно запустила Falcon 9 с партией спутников Starlink на орбиту.",
+    "image_url": "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=600",
+    "emoji": "🚀",
+    "gradient": "linear-gradient(135deg, #e65100, #ff9800)",
+    "tag": "Космос"
+  },
+  {
+    "id": 17,
+    "source": {
+      "name": "Известия",
+      "nick": "izvestia",
+      "avatar_url": "https://i.pravatar.cc/150?img=7",
+      "color": "#00838f",
+      "sub": "СМИ"
+    },
+    "title": "🍔 В Москве открылся первый ресторан с едой от нейросети",
+    "description": "Меню создано искусственным интеллектом: блюда генерируются по вкусовым предпочтениям посетителей.",
+    "image_url": "https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=600",
+    "emoji": "🍔",
+    "gradient": "linear-gradient(135deg, #00838f, #26c6da)",
+    "tag": "Общество"
+  },
+  {
+    "id": 18,
+    "source": {
+      "name": "Ведомости",
+      "nick": "vedomosti",
+      "avatar_url": "https://i.pravatar.cc/150?img=8",
+      "color": "#c62828",
+      "sub": "СМИ"
+    },
+    "title": "📈 Рынок криптовалют: биткоин вырос до $80 000",
+    "description": "За неделю биткоин подорожал на 15%. Эксперты прогнозируют рост до $100 000 к концу года.",
+    "image_url": "https://images.unsplash.com/photo-1518544804039-6393e3e1a93f?w=600",
+    "emoji": "📈",
+    "gradient": "linear-gradient(135deg, #c62828, #ef5350)",
+    "tag": "Финансы"
+  },
+  {
+    "id": 19,
+    "source": {
+      "name": "Газета.Ru",
+      "nick": "gazetaru",
+      "avatar_url": "https://i.pravatar.cc/150?img=9",
+      "color": "#e91e63",
+      "sub": "СМИ"
+    },
+    "title": "🎸 Билли Айлиш выпустила новый альбом «Vibe»",
+    "description": "Альбом уже доступен на всех платформах. Поклонники называют его лучшей работой певицы.",
+    "image_url": "https://images.unsplash.com/photo-1512414438076-0d42fd2d2d63?w=600",
+    "emoji": "🎸",
+    "gradient": "linear-gradient(135deg, #e91e63, #f06292)",
+    "tag": "Музыка"
+  },
+  {
+    "id": 20,
+    "source": {
+      "name": "Lenta.ru",
+      "nick": "lenta",
+      "avatar_url": "https://i.pravatar.cc/150?img=10",
+      "color": "#283593",
+      "sub": "СМИ"
+    },
+    "title": "⛈️ Сильный ветер в Москве: объявлено предупреждение",
+    "description": "МЧС предупреждает о сильных порывах ветра до 20 м/с. Рекомендуется избегать нахождения вблизи деревьев и рекламных конструкций.",
+    "image_url": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600",
+    "emoji": "⛈️",
+    "gradient": "linear-gradient(135deg, #283593, #5c6bc0)",
+    "tag": "Погода"
   }
 ]
