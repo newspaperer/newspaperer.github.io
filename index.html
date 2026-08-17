@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Newspaperer · Лента новостей</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif; background: #f2f2f7; color: #000; padding: 0; margin: 0; min-height: 100vh; }
+        .feed-header { padding: 16px 20px 14px; background: rgba(242, 242, 247, 0.7); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border-bottom: 0.5px solid rgba(60, 60, 67, 0.08); position: sticky; top: 0; z-index: 10; }
+        .feed-header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; background: linear-gradient(145deg, #1c1c1e, #3a3a3c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .feed-header .sub { font-size: 15px; font-weight: 400; color: #8e8e93; margin-top: 2px; letter-spacing: -0.2px; }
+        .feed-container { max-width: 600px; margin: 0 auto; padding: 12px 16px 40px; display: flex; flex-direction: column; gap: 18px; }
+        .post-card { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 28px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02); border: 0.5px solid rgba(255, 255, 255, 0.6); overflow: hidden; transition: transform 0.15s ease, box-shadow 0.2s ease; }
+        .post-card:active { transform: scale(0.985); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
+        .post-cover { width: 100%; aspect-ratio: 16 / 10; background: #d9d9e3; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; }
+        .post-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .cover-placeholder { font-size: 48px; font-weight: 700; color: rgba(255, 255, 255, 0.85); text-shadow: 0 2px 12px rgba(0,0,0,0.15); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+        .post-meta { padding: 14px 18px 10px 18px; display: flex; align-items: center; gap: 12px; }
+        .avatar { width: 38px; height: 38px; border-radius: 50%; background: #007aff; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 16px; color: white; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2); }
+        .avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+        .channel-info { display: flex; flex-direction: column; flex: 1; }
+        .channel-name { font-size: 16px; font-weight: 600; line-height: 1.2; color: #1c1c1e; }
+        .channel-sub { font-size: 13px; font-weight: 400; color: #8e8e93; letter-spacing: -0.2px; }
+        .post-time { font-size: 13px; color: #8e8e93; margin-left: auto; white-space: nowrap; }
+        .post-body { padding: 0 18px 16px 18px; }
+        .post-title { font-size: 17px; font-weight: 620; line-height: 1.35; margin-bottom: 6px; color: #1c1c1e; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .post-description { font-size: 15px; font-weight: 400; line-height: 1.45; color: #3a3a3c; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; opacity: 0.85; }
+        .news-tag { display: inline-block; font-size: 11px; font-weight: 600; color: #007aff; background: rgba(0, 122, 255, 0.1); padding: 2px 10px; border-radius: 12px; margin-top: 4px; letter-spacing: 0.3px; }
+        .loader-trigger { height: 60px; display: flex; align-items: center; justify-content: center; color: #8e8e93; font-size: 14px; font-weight: 500; letter-spacing: 0.3px; margin-top: 8px; transition: opacity 0.2s; }
+        .loader-trigger .spinner { display: inline-block; width: 20px; height: 20px; border: 2.5px solid rgba(142, 142, 147, 0.2); border-top-color: #007aff; border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 12px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loader-trigger.hidden { opacity: 0; pointer-events: none; }
+        @media (max-width: 480px) { .feed-header h1 { font-size: 24px; } .post-card { border-radius: 24px; } .post-cover { aspect-ratio: 16 / 11; } }
+        @media (prefers-color-scheme: dark) {
+            body { background: #000; }
+            .feed-header { background: rgba(0, 0, 0, 0.8); border-bottom: 0.5px solid rgba(255, 255, 255, 0.08); }
+            .feed-header h1 { background: linear-gradient(145deg, #f2f2f7, #b0b0b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            .feed-header .sub { color: #8e8e93; }
+            .post-card { background: rgba(28, 28, 30, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 0.5px solid rgba(255, 255, 255, 0.06); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); }
+            .channel-name { color: #f2f2f7; }
+            .channel-sub, .post-time { color: #8e8e93; }
+            .post-title { color: #f2f2f7; }
+            .post-description { color: #b0b0b8; }
+            .post-cover { background: #2c2c2e; }
+            .cover-placeholder { background: linear-gradient(135deg, #3a3a3c, #1c1c1e); }
+        }
+    </style>
+</head>
+<body>
+    <header class="feed-header">
+        <h1>Newspaperer</h1>
+        <div class="sub">Лента · Август 2026</div>
+    </header>
+    <div id="feed" class="feed-container">
+        <div id="loaderTrigger" class="loader-trigger">
+            <span class="spinner"></span>
+            <span>Загрузка новостей...</span>
+        </div>
+    </div>
+
+    <script>
+        const GITHUB_USER = 'newspaperer';
+        const REPO_NAME = 'newspaperer.github.io';
+        const NEWS_URL = `https://raw.githubusercontent.com/${GITHUB_USER}/${REPO_NAME}/main/news.json`;
+
+        let allPosts = [];
+        let postPool = [];
+
+        function shuffleArray(arr) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function createPost(data) {
+            const post = document.createElement('div');
+            post.className = 'post-card';
+
+            const cover = document.createElement('div');
+            cover.className = 'post-cover';
+            if (data.image_url) {
+                const img = document.createElement('img');
+                img.src = data.image_url;
+                img.alt = data.title;
+                cover.appendChild(img);
+            } else {
+                const placeholder = document.createElement('div');
+                placeholder.className = 'cover-placeholder';
+                placeholder.style.background = data.gradient || 'linear-gradient(135deg, #8e8e93, #636366)';
+                placeholder.textContent = data.emoji || '📰';
+                cover.appendChild(placeholder);
+            }
+            post.appendChild(cover);
+
+            const meta = document.createElement('div');
+            meta.className = 'post-meta';
+
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar';
+            if (data.source.avatar_url) {
+                const img = document.createElement('img');
+                img.src = data.source.avatar_url;
+                avatar.appendChild(img);
+            } else {
+                avatar.style.background = data.source.color || '#007aff';
+                avatar.textContent = data.source.nick || '📰';
+            }
+
+            const info = document.createElement('div');
+            info.className = 'channel-info';
+            const name = document.createElement('span');
+            name.className = 'channel-name';
+            name.textContent = data.source.name;
+            const sub = document.createElement('span');
+            sub.className = 'channel-sub';
+            sub.textContent = data.source.sub || 'Источник';
+            info.appendChild(name);
+            info.appendChild(sub);
+
+            const timeEl = document.createElement('span');
+            timeEl.className = 'post-time';
+            const now = new Date();
+            timeEl.textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+            meta.appendChild(avatar);
+            meta.appendChild(info);
+            meta.appendChild(timeEl);
+            post.appendChild(meta);
+
+            const body = document.createElement('div');
+            body.className = 'post-body';
+            const t = document.createElement('div');
+            t.className = 'post-title';
+            t.textContent = data.title;
+            const d = document.createElement('div');
+            d.className = 'post-description';
+            d.textContent = data.description;
+            body.appendChild(t);
+            body.appendChild(d);
+            if (data.tag) {
+                const tag = document.createElement('span');
+                tag.className = 'news-tag';
+                tag.textContent = data.tag;
+                body.appendChild(tag);
+            }
+            post.appendChild(body);
+            return post;
+        }
+
+        const feed = document.getElementById('feed');
+        const loaderTrigger = document.getElementById('loaderTrigger');
+
+        function loadInitial() {
+            const shuffled = shuffleArray([...allPosts]);
+            const initial = shuffled.slice(0, 6);
+            initial.forEach(postData => {
+                const post = createPost(postData);
+                feed.insertBefore(post, loaderTrigger);
+            });
+            postPool = shuffled.slice(6);
+        }
+
+        function loadMorePosts() {
+            loaderTrigger.querySelector('span:last-child').textContent = 'Загрузка...';
+            setTimeout(() => {
+                const count = 2 + Math.floor(Math.random() * 3);
+                for (let i = 0; i < count; i++) {
+                    if (postPool.length === 0) {
+                        postPool = shuffleArray([...allPosts]);
+                    }
+                    const postData = postPool.pop();
+                    if (postData) {
+                        const post = createPost(postData);
+                        feed.insertBefore(post, loaderTrigger);
+                    }
+                }
+                loaderTrigger.querySelector('span:last-child').textContent = 'Ещё новости · прокрутите вниз';
+            }, 500);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadMorePosts();
+                }
+            });
+        }, { rootMargin: '0px 0px 200px 0px' });
+        observer.observe(loaderTrigger);
+
+        async function loadNews() {
+            try {
+                const response = await fetch(NEWS_URL);
+                if (!response.ok) throw new Error('Ошибка загрузки');
+                allPosts = await response.json();
+                loadInitial();
+            } catch (error) {
+                console.error('Ошибка:', error);
+                feed.innerHTML = '<p style="text-align:center;color:#8e8e93;padding:40px;">Не удалось загрузить новости. Проверьте файл news.json</p>';
+            }
+        }
+
+        loadNews();
+    </script>
+</body>
+  </html>
