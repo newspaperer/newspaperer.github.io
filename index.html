@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Лента · Telegram</title>
+    <title>Лента</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -15,6 +15,7 @@
             min-height: 100vh;
         }
 
+        /* ===== ВЕРХНЯЯ ПАНЕЛЬ ===== */
         .feed-header {
             padding: 12px 16px;
             background: #fff;
@@ -29,49 +30,65 @@
         .feed-header h1 { font-size: 20px; font-weight: 700; color: #1c1c1e; }
         .feed-header .sub { font-size: 14px; color: #8e8e93; }
 
+        /* ===== КОНТЕЙНЕР ===== */
         .feed-container {
             max-width: 600px;
             margin: 0 auto;
-            padding: 0 12px 80px;
+            padding: 8px 12px 80px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 12px;
         }
 
+        /* ===== ДАТА (Вчера/Сегодня) ===== */
+        .date-divider {
+            text-align: center;
+            padding: 8px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #8e8e93;
+            background: #f0f2f5;
+            border-radius: 12px;
+            margin: 4px 0;
+        }
+
+        /* ===== КАРТОЧКА ПОСТА ===== */
         .post-card {
             background: #fff;
             border-radius: 12px;
             padding: 12px 14px 10px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
             cursor: pointer;
             transition: transform 0.1s ease;
         }
         .post-card:active { transform: scale(0.98); }
 
-        .post-title {
+        /* Заголовок канала */
+        .post-source {
             font-size: 16px;
             font-weight: 600;
+            color: #1c1c1e;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .post-source .nick { color: #8e8e93; font-weight: 400; }
+
+        /* Заголовок поста */
+        .post-title {
+            font-size: 16px;
+            font-weight: 500;
             line-height: 1.4;
             color: #1c1c1e;
             margin-bottom: 4px;
             display: -webkit-box;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 4;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
 
-        .post-description {
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #3a3a3c;
-            margin-bottom: 6px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
+        /* Картинка */
         .post-cover {
             width: 100%;
             aspect-ratio: 16/9;
@@ -86,26 +103,18 @@
             object-fit: cover;
         }
 
-        .post-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 6px;
-            padding-top: 6px;
-            border-top: 1px solid #f0f0f0;
-        }
-        .post-views { font-size: 13px; color: #8e8e93; }
-
+        /* ===== РЕАКЦИИ (2 ряда, овальные кнопки) ===== */
         .post-reactions {
             display: flex;
-            gap: 6px;
             flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
         }
         .reaction-bubble {
             background: #f0f2f5;
-            padding: 3px 8px;
+            padding: 4px 10px;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 15px;
             display: flex;
             align-items: center;
             gap: 4px;
@@ -113,8 +122,29 @@
             transition: background 0.2s;
         }
         .reaction-bubble:hover { background: #e0e0e0; }
-        .reaction-bubble .count { color: #8e8e93; font-weight: 500; }
+        .reaction-bubble .count {
+            color: #8e8e93;
+            font-size: 14px;
+            font-weight: 500;
+        }
 
+        /* ===== ПРОСМОТРЫ И ВРЕМЯ ===== */
+        .post-footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 4px;
+            gap: 12px;
+        }
+        .post-footer .views-time {
+            font-size: 13px;
+            color: #8e8e93;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ===== ЛЕНТА КАНАЛА ===== */
         .channel-feed {
             display: none;
             position: fixed;
@@ -142,14 +172,15 @@
             gap: 12px;
         }
 
+        /* ===== ТЁМНАЯ ТЕМА ===== */
         @media (prefers-color-scheme: dark) {
             body { background: #000; }
             .feed-header { background: #1c1c1e; border-bottom: 1px solid #2c2c2e; }
             .feed-header h1 { color: #f2f2f7; }
             .post-card { background: #1c1c1e; }
+            .post-source { color: #f2f2f7; }
             .post-title { color: #f2f2f7; }
-            .post-description { color: #b0b0b8; }
-            .post-footer { border-top: 1px solid #2c2c2e; }
+            .post-footer .views-time { color: #8e8e93; }
             .reaction-bubble { background: #2c2c2e; }
             .reaction-bubble .count { color: #8e8e93; }
             .channel-feed { background: #000; }
@@ -171,7 +202,6 @@
     </div>
 
     <script>
-        // ===== ЗАГРУЗКА ДАННЫХ =====
         const GITHUB_USER = 'newspaperer';
         const REPO_NAME = 'newspaperer.github.io';
         const NEWS_URL = `https://raw.githubusercontent.com/${GITHUB_USER}/${REPO_NAME}/main/news.json`;
@@ -184,41 +214,86 @@
         const feed = document.getElementById('feed');
         const loaderTrigger = document.getElementById('loaderTrigger');
 
-        // ===== ГЕНЕРАЦИЯ РЕАКЦИЙ НА ОСНОВЕ ТОНА =====
-        function generateReactions(tone) {
-            const toneMap = {
-                'absurd': { '🤡': 482, '🤣': 162, '🤔': 23, '💩': 23, '🤢': 12, '🤩': 5, '👍': 3, '🔥': 2 },
-                'serious': { '👍': 326, '🤣': 21, '🔥': 10, '👏': 8, '😭': 6, '🤩': 6, '🎉': 3, '💩': 2 },
-                'exciting': { '🤯': 438, '😭': 88, '❤': 58, '😁': 35, '🗿': 24, '👍': 11 },
-                'negative': { '❤': 266, '👍': 21, '🤣': 18, '😭': 7, '😎': 5, '🔥': 2 },
-                'scandal': { '❤': 691, '🤡': 249, '🤬': 37, '🕊': 25 },
-                'positive': { '👍': 55, '😁': 25, '❤': 18, '🔥': 10 },
-                'surprising': { '😱': 25, '🍺': 7, '👍': 5, '😁': 5, '❤': 2, '🔥': 1 }
-            };
-            return toneMap[tone] || { '👍': 40, '❤': 30, '🔥': 10 };
+        // ===== СЛОВА ДЛЯ КАТЕГОРИЙ =====
+        const categoryKeywords = {
+            'политика': ['президент', 'правительство', 'закон', 'выборы', 'депутат', 'партия', 'госдума', 'совет', 'мин', 'конституция', 'указ', 'решение'],
+            'скандалы': ['скандал', 'суд', 'иск', 'обвинение', 'разбирательство', 'конфликт', 'нарушение', 'арест', 'задержание', 'разоблачение'],
+            'спорт': ['матч', 'футбол', 'хоккей', 'теннис', 'победа', 'поражение', 'гол', 'чемпионат', 'турнир', 'игрок', 'тренер', 'команда', 'стадион'],
+            'наука': ['учёные', 'исследование', 'открытие', 'технология', 'разработка', 'алгоритм', 'нейросеть', 'искусственный', 'интеллект', 'лаборатория', 'эксперимент'],
+            'космос': ['космос', 'спутник', 'ракета', 'планета', 'звезда', 'орбита', 'галактика', 'наса', 'марс', 'луна', 'солнечный'],
+            'авто': ['автомобиль', 'машина', 'двигатель', 'мотор', 'колесо', 'завод', 'кузов', 'салон', 'диски', 'передача', 'топливо'],
+            'шоу-бизнес': ['музыка', 'певец', 'певица', 'концерт', 'альбом', 'клип', 'тур', 'премьера', 'выступление', 'артист', 'фестиваль', 'песня'],
+            'погода': ['погода', 'дождь', 'снег', 'ветер', 'температура', 'мороз', 'жара', 'гроза', 'облачно', 'солнце', 'осадки'],
+            'происшествия': ['авария', 'пожар', 'дтп', 'взрыв', 'столкновение', 'пострадал', 'спасение', 'эвакуация', 'травма'],
+            'экономика': ['доллар', 'евро', 'рубль', 'акции', 'нефть', 'цена', 'рынок', 'инвестиция', 'прибыль', 'кризис', 'падение', 'рост']
+        };
+
+        // ===== ОПРЕДЕЛЕНИЕ ТОНА =====
+        function detectTone(title, description) {
+            const text = (title + ' ' + description).toLowerCase();
+            let scores = {};
+            for (const [cat, words] of Object.entries(categoryKeywords)) {
+                let score = 0;
+                for (const w of words) if (text.includes(w)) score++;
+                scores[cat] = score;
+            }
+            let best = 'серьёзное', bestScore = 0;
+            for (const [cat, score] of Object.entries(scores)) {
+                if (score > bestScore) { bestScore = score; best = cat; }
+            }
+            return best;
         }
 
-        // ===== СОЗДАНИЕ КАРТОЧКИ =====
-        function createPost(data) {
+        // ===== ГЕНЕРАЦИЯ РЕАКЦИЙ (случайные, маленькие числа) =====
+        function generateReactions(category) {
+            const base = {
+                'политика': { '👍': 30, '🤔': 20, '🔥': 15, '💩': 8, '🤡': 6 },
+                'скандалы': { '🤡': 40, '🤬': 25, '🕊': 12, '🤣': 10, '😱': 5 },
+                'спорт': { '⚽': 30, '👍': 20, '🔥': 12, '🎉': 8, '💪': 5 },
+                'наука': { '🔬': 25, '🤯': 18, '👍': 12, '📚': 8, '🧠': 5 },
+                'космос': { '🚀': 30, '🌟': 20, '🤯': 12, '👍': 8, '🪐': 5 },
+                'авто': { '🚗': 25, '🔥': 18, '👍': 12, '😎': 8, '💨': 5 },
+                'шоу-бизнес': { '🎤': 30, '❤': 20, '🔥': 12, '🤩': 8, '😭': 5 },
+                'погода': { '☀️': 25, '👍': 18, '❤': 12, '🌧️': 8, '❄️': 5 },
+                'происшествия': { '🚨': 30, '😱': 20, '🙏': 12, '😭': 8, '💔': 5 },
+                'экономика': { '💵': 25, '📈': 18, '📉': 12, '🤔': 8, '🔥': 5 },
+                'серьёзное': { '👍': 25, '🤔': 18, '📝': 12, '🔥': 8, '💪': 5 }
+            };
+            const emojis = base[category] || base['серьёзное'];
+            let result = {};
+            for (const [emoji, count] of Object.entries(emojis)) {
+                // добавляем случайный разброс ±40%
+                const variation = Math.floor(count * (0.6 + Math.random() * 0.8));
+                result[emoji] = Math.max(1, variation);
+            }
+            return result;
+        }
+
+        // ===== СОЗДАНИЕ ПОСТА =====
+        function createPost(data, isChannelFeed = false) {
             const post = document.createElement('div');
             post.className = 'post-card';
             post.dataset.id = data.id;
             post.dataset.tag = data.tag;
             post.dataset.source = data.source.name;
 
-            // Тайтл
+            // Источник
+            const source = document.createElement('div');
+            source.className = 'post-source';
+            source.textContent = data.source.name;
+            const nick = document.createElement('span');
+            nick.className = 'nick';
+            nick.textContent = ` · ${data.source.sub}`;
+            source.appendChild(nick);
+            post.appendChild(source);
+
+            // Заголовок
             const title = document.createElement('div');
             title.className = 'post-title';
             title.textContent = data.title;
             post.appendChild(title);
 
-            // Описание
-            const desc = document.createElement('div');
-            desc.className = 'post-description';
-            desc.textContent = data.description;
-            post.appendChild(desc);
-
-            // Обложка
+            // Картинка (если есть)
             if (data.image_url) {
                 const cover = document.createElement('div');
                 cover.className = 'post-cover';
@@ -229,22 +304,11 @@
             }
 
             // Реакции
-            const footer = document.createElement('div');
-            footer.className = 'post-footer';
+            const reactionsDiv = document.createElement('div');
+            reactionsDiv.className = 'post-reactions';
 
-            const views = document.createElement('div');
-            views.className = 'post-views';
-            views.textContent = `👁 ${data.views.toLocaleString()}`;
-            footer.appendChild(views);
-
-            const reactionsContainer = document.createElement('div');
-            reactionsContainer.className = 'post-reactions';
-
-            let reactions = generateReactions(data.emotional_tone);
-            // Если пользователь уже ставил реакции на этот пост, восстанавливаем их
-            if (userReactions[data.id]) {
-                reactions = userReactions[data.id];
-            }
+            let reactions = generateReactions(data.category || detectTone(data.title, data.description));
+            if (userReactions[data.id]) reactions = userReactions[data.id];
 
             for (const [emoji, count] of Object.entries(reactions)) {
                 const bubble = document.createElement('div');
@@ -264,16 +328,13 @@
                     if (!userReactions[postId][emoji]) userReactions[postId][emoji] = 0;
 
                     if (userReactions[postId][emoji] > 0) {
-                        // Уже поставил — убираем
                         userReactions[postId][emoji]--;
                         countSpan.textContent = current - 1;
                     } else {
-                        // Ставим
                         userReactions[postId][emoji]++;
                         countSpan.textContent = current + 1;
                     }
 
-                    // Обновляем оценки тем
                     const tag = document.querySelector(`.post-card[data-id="${postId}"]`).dataset.tag;
                     if (!topicScores[tag]) topicScores[tag] = 0;
                     topicScores[tag] += 1;
@@ -282,17 +343,29 @@
                     localStorage.setItem('topicScores', JSON.stringify(topicScores));
                 });
 
-                reactionsContainer.appendChild(bubble);
+                reactionsDiv.appendChild(bubble);
             }
+            post.appendChild(reactionsDiv);
 
-            footer.appendChild(reactionsContainer);
+            // Просмотры и время
+            const footer = document.createElement('div');
+            footer.className = 'post-footer';
+            const viewsTime = document.createElement('div');
+            viewsTime.className = 'views-time';
+            const views = data.views || Math.floor(1000 + Math.random() * 20000);
+            const time = new Date();
+            const h = String(time.getHours()).padStart(2, '0');
+            const m = String(time.getMinutes()).padStart(2, '0');
+            viewsTime.textContent = `👁 ${views.toLocaleString()} · ${h}:${m}`;
+            footer.appendChild(viewsTime);
             post.appendChild(footer);
 
-            // Клик по посту — открывает ленту канала
-            post.addEventListener('click', function() {
-                const sourceName = this.dataset.source;
-                openChannelFeed(sourceName);
-            });
+            // Клик на пост = лента канала (если не внутри ленты канала)
+            if (!isChannelFeed) {
+                post.addEventListener('click', function() {
+                    openChannelFeed(this.dataset.source);
+                });
+            }
 
             return post;
         }
@@ -321,11 +394,7 @@
             channelDiv.appendChild(title);
 
             channelPosts.forEach(postData => {
-                const post = createPost(postData);
-                // в ленте канала клик на пост не открывает другую ленту
-                post.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                });
+                const post = createPost(postData, true);
                 channelDiv.appendChild(post);
             });
 
@@ -334,7 +403,6 @@
 
         // ===== ЗАГРУЗКА И СОРТИРОВКА =====
         function loadInitial() {
-            // Сортируем с учётом оценок тем
             let sorted = [...allPosts];
             sorted.sort((a,b) => {
                 const scoreA = topicScores[a.tag] || 0;
@@ -372,7 +440,6 @@
             return arr;
         }
 
-        // ===== НАБЛЮДАТЕЛЬ =====
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) loadMorePosts();
@@ -380,14 +447,12 @@
         }, { rootMargin: '0px 0px 200px 0px' });
         observer.observe(loaderTrigger);
 
-        // ===== ЗАПУСК =====
         async function loadNews() {
             try {
                 const response = await fetch(NEWS_URL);
                 allPosts = await response.json();
                 loadInitial();
             } catch (error) {
-                console.error('Ошибка загрузки:', error);
                 feed.innerHTML = '<p style="text-align:center;color:#8e8e93;padding:40px;">Не удалось загрузить новости</p>';
             }
         }
