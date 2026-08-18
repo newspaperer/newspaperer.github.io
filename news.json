@@ -4,7 +4,7 @@
     "source": {
       "name": "Срочно, Сейчас",
       "nick": "emergency_now",
-      "avatar_url": "https://i.pravatar.cc/150?img=1",
+      "avatar_url": "",
       "color": "#0088cc",
       "sub": "Политика"
     },
@@ -14,15 +14,15 @@
     "emoji": "📰",
     "gradient": "linear-gradient(135deg, #0088cc, #00aaff)",
     "tag": "Политика",
-    "emotional_tone": "absurd",
-    "views": 16800
+    "views": 16800,
+    "category": "политика"
   },
   {
     "id": 2,
     "source": {
       "name": "Яблоко",
       "nick": "apple_party",
-      "avatar_url": "https://i.pravatar.cc/150?img=2",
+      "avatar_url": "",
       "color": "#4caf50",
       "sub": "Политика"
     },
@@ -32,15 +32,15 @@
     "emoji": "🍏",
     "gradient": "linear-gradient(135deg, #4caf50, #81c784)",
     "tag": "Политика",
-    "emotional_tone": "serious",
-    "views": 14600
+    "views": 14600,
+    "category": "политика"
   },
   {
     "id": 3,
     "source": {
       "name": "Канье Уэст",
       "nick": "kanye_west",
-      "avatar_url": "https://i.pravatar.cc/150?img=3",
+      "avatar_url": "",
       "color": "#8e44ad",
       "sub": "Шоу-бизнес"
     },
@@ -50,15 +50,15 @@
     "emoji": "🎤",
     "gradient": "linear-gradient(135deg, #8e44ad, #bb8fce)",
     "tag": "Музыка",
-    "emotional_tone": "exciting",
-    "views": 31100
+    "views": 31100,
+    "category": "шоу-бизнес"
   },
   {
     "id": 4,
     "source": {
       "name": "CS2 News",
       "nick": "newcsgo",
-      "avatar_url": "https://i.pravatar.cc/150?img=4",
+      "avatar_url": "",
       "color": "#2e7d32",
       "sub": "Игры"
     },
@@ -68,15 +68,15 @@
     "emoji": "🎮",
     "gradient": "linear-gradient(135deg, #2e7d32, #43a047)",
     "tag": "CS2",
-    "emotional_tone": "negative",
-    "views": 33800
+    "views": 33800,
+    "category": "скандалы"
   },
   {
     "id": 5,
     "source": {
       "name": "Лерчек",
       "nick": "lerchek",
-      "avatar_url": "https://i.pravatar.cc/150?img=5",
+      "avatar_url": "",
       "color": "#e91e63",
       "sub": "Скандалы"
     },
@@ -86,15 +86,15 @@
     "emoji": "⚖️",
     "gradient": "linear-gradient(135deg, #e91e63, #f06292)",
     "tag": "Скандалы",
-    "emotional_tone": "scandal",
-    "views": 104000
+    "views": 104000,
+    "category": "скандалы"
   },
   {
     "id": 6,
     "source": {
       "name": "Suzuki Twin",
       "nick": "suzuki_twin",
-      "avatar_url": "https://i.pravatar.cc/150?img=6",
+      "avatar_url": "",
       "color": "#e65100",
       "sub": "Авто"
     },
@@ -104,15 +104,15 @@
     "emoji": "🚗",
     "gradient": "linear-gradient(135deg, #e65100, #ff9800)",
     "tag": "Авто-тюнинг",
-    "emotional_tone": "positive",
-    "views": 15200
+    "views": 15200,
+    "category": "авто"
   },
   {
     "id": 7,
     "source": {
       "name": "N+1",
       "nick": "nplusone",
-      "avatar_url": "https://i.pravatar.cc/150?img=7",
+      "avatar_url": "",
       "color": "#283593",
       "sub": "Наука"
     },
@@ -122,7 +122,61 @@
     "emoji": "🎵",
     "gradient": "linear-gradient(135deg, #283593, #5c6bc0)",
     "tag": "Музыка-ДТП",
-    "emotional_tone": "surprising",
-    "views": 2600
+    "views": 2600,
+    "category": "происшествия"
+  },
+  {
+    "id": 8,
+    "source": {
+      "name": "Погода 24",
+      "nick": "weather24",
+      "avatar_url": "",
+      "color": "#f39c12",
+      "sub": "Погода"
+    },
+    "title": "В Москве ожидается до +25°C и дожди",
+    "description": "Синоптики прогнозируют тёплую погоду, но во второй половине недели возможны осадки.",
+    "image_url": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600",
+    "emoji": "☀️",
+    "gradient": "linear-gradient(135deg, #f39c12, #e67e22)",
+    "tag": "Погода",
+    "views": 5800,
+    "category": "погода"
+  },
+  {
+    "id": 9,
+    "source": {
+      "name": "Ведомости",
+      "nick": "vedomosti",
+      "avatar_url": "",
+      "color": "#c62828",
+      "sub": "Экономика"
+    },
+    "title": "Акции Tesla упали на 12% после отчёта",
+    "description": "Компания Илона Маска показала снижение доходов из-за падения спроса в Китае.",
+    "image_url": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600",
+    "emoji": "📉",
+    "gradient": "linear-gradient(135deg, #c62828, #ef5350)",
+    "tag": "Экономика",
+    "views": 9700,
+    "category": "экономика"
+  },
+  {
+    "id": 10,
+    "source": {
+      "name": "Новости спорта",
+      "nick": "sport_news",
+      "avatar_url": "",
+      "color": "#1565c0",
+      "sub": "Спорт"
+    },
+    "title": "Сборная России разгромила Казахстан 3:1",
+    "description": "В товарищеском матче наша команда уверенно победила.",
+    "image_url": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600",
+    "emoji": "⚽",
+    "gradient": "linear-gradient(135deg, #1565c0, #42a5f5)",
+    "tag": "Спорт",
+    "views": 14300,
+    "category": "спорт"
   }
 ]
