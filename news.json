@@ -179,7 +179,6 @@
     "views": 14300,
     "category": "спорт"
   },
-  
   {
     "id": 11,
     "source": {
@@ -189,15 +188,16 @@
       "color": "#0088cc",
       "sub": "Политика"
     },
-    "title": "Я получаю удачные сигналы — трамп",
-    "description": "да эта так.",
+    "title": "Я получаю удачные сигналы — Трамп",
+    "description": "Трамп заявил о позитивных сигналах в переговорах.",
     "image_url": "https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=600",
     "emoji": "📰",
     "gradient": "linear-gradient(135deg, #0088cc, #00aaff)",
-    "tag": "ну типо да новостьь78 не 433",
+    "tag": "Срочно",
     "views": 16800,
     "category": "политика"
-  },{
+  },
+  {
     "id": 12,
     "source": {
       "name": "Канье Уэст",
@@ -206,14 +206,13 @@
       "color": "#8e44ad",
       "sub": "Шоу-бизнес"
     },
-    "title": 
-    "Toxi$ запишет трек с Бузовой и Бастой",
-    "description": "Рэпер анонсировал большой сольный концерт в столице.",
+    "title": "Toxi$ запишет трек с Бузовой и Бастой",
+    "description": "Рэпер Toxi$ анонсировал совместный трек с Ольгой Бузовой и Бастой.",
     "image_url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
     "emoji": "🎤",
     "gradient": "linear-gradient(135deg, #8e44ad, #bb8fce)",
     "tag": "Музыка",
     "views": 31100,
     "category": "шоу-бизнес"
-  },
+  }
 ]
