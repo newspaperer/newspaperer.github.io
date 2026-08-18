@@ -189,7 +189,7 @@
       "sub": "Политика"
     },
     "title": "Я получаю удачные сигналы — Трамп",
-    "description": "Трамп заявил о позитивных сигналах в переговорах.",
+    "description": "да эта так.",
     "image_url": "https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=600",
     "emoji": "📰",
     "gradient": "linear-gradient(135deg, #0088cc, #00aaff)",
@@ -207,7 +207,7 @@
       "sub": "Шоу-бизнес"
     },
     "title": "Toxi$ запишет трек с Бузовой и Бастой",
-    "description": "Рэпер Toxi$ анонсировал совместный трек с Ольгой Бузовой и Бастой.",
+    "description": "Рэпер анонсировал большой сольный концерт в столице.",
     "image_url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
     "emoji": "🎤",
     "gradient": "linear-gradient(135deg, #8e44ad, #bb8fce)",
@@ -215,7 +215,7 @@
     "views": 31100,
     "category": "шоу-бизнес"
   },
-    {
+  {
     "id": 13,
     "source": {
       "name": "Московский комсомолец",
@@ -935,5 +935,4 @@
     "views": 12800,
     "category": "погода"
   }
-]
 ]
