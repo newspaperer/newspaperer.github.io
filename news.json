@@ -197,5 +197,23 @@
     "tag": "ну типо да новостьь78 не 433",
     "views": 16800,
     "category": "политика"
-  }
+  },{
+    "id": 12,
+    "source": {
+      "name": "Канье Уэст",
+      "nick": "kanye_west",
+      "avatar_url": "",
+      "color": "#8e44ad",
+      "sub": "Шоу-бизнес"
+    },
+    "title": 
+    "Toxi$ запишет трек с Бузовой и Бастой",
+    "description": "Рэпер анонсировал большой сольный концерт в столице.",
+    "image_url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
+    "emoji": "🎤",
+    "gradient": "linear-gradient(135deg, #8e44ad, #bb8fce)",
+    "tag": "Музыка",
+    "views": 31100,
+    "category": "шоу-бизнес"
+  },
 ]
