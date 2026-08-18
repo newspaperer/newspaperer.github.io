@@ -2,161 +2,127 @@
   {
     "id": 1,
     "source": {
-      "name": "Белгородский вестник",
-      "nick": "lpr1_Belgorod_alarm",
+      "name": "Срочно, Сейчас",
+      "nick": "emergency_now",
       "avatar_url": "https://i.pravatar.cc/150?img=1",
-      "color": "#d32f2f",
-      "sub": "Telegram-канал"
+      "color": "#0088cc",
+      "sub": "Политика"
     },
-    "title": "🚨 Опасность БПЛА в Белгородском районе",
-    "description": "Предупреждение об опасности, связанной с беспилотными летательными аппаратами. Просмотры: 20.3K.",
-    "image_url": "",
-    "emoji": "🚨",
-    "gradient": "linear-gradient(135deg, #d32f2f, #f44336)",
-    "tag": "БПЛА"
+    "title": "Ким Чен Ын всегда относился ко мне с большим уважением. Я понимаю его, а он понимает меня — Трамп",
+    "description": "Дональд Трамп заявил о взаимопонимании с лидером КНДР.",
+    "image_url": "https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=600",
+    "emoji": "📰",
+    "gradient": "linear-gradient(135deg, #0088cc, #00aaff)",
+    "tag": "Политика",
+    "emotional_tone": "absurd",
+    "views": 16800
   },
   {
     "id": 2,
     "source": {
-      "name": "Кубок России",
-      "nick": "russiancup_official",
+      "name": "Яблоко",
+      "nick": "apple_party",
       "avatar_url": "https://i.pravatar.cc/150?img=2",
-      "color": "#1565c0",
-      "sub": "Спортивный канал"
+      "color": "#4caf50",
+      "sub": "Политика"
     },
-    "title": "⚽ Расписание матчей FONBET Кубка России",
-    "description": "РФС утвердил даты и время начала матчей второй части группового этапа. Просмотры: 25.3K.",
-    "image_url": "",
-    "emoji": "⚽",
-    "gradient": "linear-gradient(135deg, #1565c0, #42a5f5)",
-    "tag": "Футбол"
+    "title": "ЦИК исключил «Яблоко» из федерального бюллетеня по выборам в Госдуму",
+    "description": "Партия не прошла регистрацию для участия в выборах.",
+    "image_url": "https://images.unsplash.com/photo-1541872707-1bfbc7b49940?w=600",
+    "emoji": "🍏",
+    "gradient": "linear-gradient(135deg, #4caf50, #81c784)",
+    "tag": "Политика",
+    "emotional_tone": "serious",
+    "views": 14600
   },
   {
     "id": 3,
     "source": {
-      "name": "CS2 News",
-      "nick": "newcsgo",
+      "name": "Канье Уэст",
+      "nick": "kanye_west",
       "avatar_url": "https://i.pravatar.cc/150?img=3",
-      "color": "#2e7d32",
-      "sub": "Игровой канал"
+      "color": "#8e44ad",
+      "sub": "Шоу-бизнес"
     },
-    "title": "🎮 2026 год в CS2 — один из худших в истории",
-    "description": "Падает AVG онлайн, нет операций и контента. Игроки разочарованы. Просмотры: 33.8K.",
-    "image_url": "",
-    "emoji": "🎮",
-    "gradient": "linear-gradient(135deg, #2e7d32, #43a047)",
-    "tag": "CS2"
+    "title": "Канье Уэст даст концерт в Москве в 2026 году",
+    "description": "Рэпер анонсировал большой сольный концерт в столице.",
+    "image_url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
+    "emoji": "🎤",
+    "gradient": "linear-gradient(135deg, #8e44ad, #bb8fce)",
+    "tag": "Музыка",
+    "emotional_tone": "exciting",
+    "views": 31100
   },
   {
     "id": 4,
     "source": {
-      "name": "Скандальная хроника",
-      "nick": "pravdadirty",
+      "name": "CS2 News",
+      "nick": "newcsgo",
       "avatar_url": "https://i.pravatar.cc/150?img=4",
-      "color": "#e91e63",
-      "sub": "Новостной канал"
+      "color": "#2e7d32",
+      "sub": "Игры"
     },
-    "title": "⚖️ Лерчек могут заменить условный срок на реальный",
-    "description": "В случае нарушения судебных запретов блогеру грозит тюремное заключение. Просмотры: 104K.",
-    "image_url": "",
-    "emoji": "⚖️",
-    "gradient": "linear-gradient(135deg, #e91e63, #f06292)",
-    "tag": "Скандалы"
+    "title": "2026 год в CS2 — один из худших в истории",
+    "description": "Падает AVG онлайн, нет операций и контента.",
+    "image_url": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600",
+    "emoji": "🎮",
+    "gradient": "linear-gradient(135deg, #2e7d32, #43a047)",
+    "tag": "CS2",
+    "emotional_tone": "negative",
+    "views": 33800
   },
   {
     "id": 5,
     "source": {
-      "name": "TechnoMedia",
-      "nick": "technomedia",
+      "name": "Лерчек",
+      "nick": "lerchek",
       "avatar_url": "https://i.pravatar.cc/150?img=5",
-      "color": "#1a73e8",
-      "sub": "Шоу-бизнес"
+      "color": "#e91e63",
+      "sub": "Скандалы"
     },
-    "title": "💰 Канье Уэст получит почти миллиард рублей за концерты",
-    "description": "Гонорар рэпера составит не менее 20 млн долларов за выступления в Петербурге. Просмотры: 31.1K.",
-    "image_url": "",
-    "emoji": "💰",
-    "gradient": "linear-gradient(135deg, #1a73e8, #4a9af5)",
-    "tag": "Канье"
+    "title": "Лерчек могут заменить условный срок на реальный",
+    "description": "В случае нарушения судебных запретов блогеру грозит тюремное заключение.",
+    "image_url": "https://images.unsplash.com/photo-1581091226825-a6a2a5a9c5b3?w=600",
+    "emoji": "⚖️",
+    "gradient": "linear-gradient(135deg, #e91e63, #f06292)",
+    "tag": "Скандалы",
+    "emotional_tone": "scandal",
+    "views": 104000
   },
   {
     "id": 6,
     "source": {
-      "name": "Vandrouki",
-      "nick": "vandroukiru",
+      "name": "Suzuki Twin",
+      "nick": "suzuki_twin",
       "avatar_url": "https://i.pravatar.cc/150?img=6",
-      "color": "#f39c12",
-      "sub": "Туристический канал"
+      "color": "#e65100",
+      "sub": "Авто"
     },
-    "title": "✈️ Дешёвые туры в ОАЭ из Краснодара за 36 000 ₽",
-    "description": "Перелёт, проживание в 5* отеле, завтраки, трансфер и страховка. Просмотры: 13.8K.",
-    "image_url": "",
-    "emoji": "✈️",
-    "gradient": "linear-gradient(135deg, #f39c12, #e67e22)",
-    "tag": "Туры"
+    "title": "Японцы превратили Suzuki Twin в «детский Nissan Skyline»",
+    "description": "Новый кузов, гоночное кресло и спортивные диски.",
+    "image_url": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600",
+    "emoji": "🚗",
+    "gradient": "linear-gradient(135deg, #e65100, #ff9800)",
+    "tag": "Авто-тюнинг",
+    "emotional_tone": "positive",
+    "views": 15200
   },
   {
     "id": 7,
     "source": {
-      "name": "Тачки",
-      "nick": "tachki",
-      "avatar_url": "https://i.pravatar.cc/150?img=7",
-      "color": "#e65100",
-      "sub": "Авто-канал"
-    },
-    "title": "🚗 Японцы превратили Suzuki Twin в «детский Nissan Skyline»",
-    "description": "Новый кузов, гоночное кресло и спортивные диски. Просмотры: 15.2K.",
-    "image_url": "",
-    "emoji": "🚗",
-    "gradient": "linear-gradient(135deg, #e65100, #ff9800)",
-    "tag": "Авто-тюнинг"
-  },
-  {
-    "id": 8,
-    "source": {
       "name": "N+1",
       "nick": "nplusone",
-      "avatar_url": "https://i.pravatar.cc/150?img=8",
+      "avatar_url": "https://i.pravatar.cc/150?img=7",
       "color": "#283593",
-      "sub": "Научный канал"
+      "sub": "Наука"
     },
-    "title": "🎵 Музыка увеличивает количество ДТП",
-    "description": "В дни выхода популярных альбомов число погибших в авариях возрастает на 15,1%. Просмотры: 2.6K.",
-    "image_url": "",
+    "title": "Музыка увеличивает количество ДТП на 15%",
+    "description": "В дни выхода популярных альбомов число погибших в авариях возрастает.",
+    "image_url": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600",
     "emoji": "🎵",
     "gradient": "linear-gradient(135deg, #283593, #5c6bc0)",
-    "tag": "Музыка-ДТП"
-  },
-  {
-    "id": 9,
-    "source": {
-      "name": "Канье Уэст",
-      "nick": "kanye_west",
-      "avatar_url": "https://i.pravatar.cc/150?img=9",
-      "color": "#8e44ad",
-      "sub": "Артист"
-    },
-    "title": "🎤 Канье Уэст даст концерт в Москве в 2026 году",
-    "description": "Рэпер и продюсер анонсировал большой сольный концерт в столице. Билеты поступят в продажу в ближайшее время.",
-    "image_url": "",
-    "emoji": "🎤",
-    "gradient": "linear-gradient(135deg, #8e44ad, #bb8fce)",
-    "tag": "Концерты"
-  },
-  {
-    "id": 10,
-    "source": {
-      "name": "Apple Insider",
-      "nick": "apple_insider",
-      "avatar_url": "https://i.pravatar.cc/150?img=10",
-      "color": "#2c3e50",
-      "sub": "Техно-канал"
-    },
-    "title": "📱 Складной iPhone Ultra выйдет в США в ноябре 2026",
-    "description": "Складной iPhone Ultra появится в магазинах США в ноябре. Стоимость стартует от $2000.",
-    "image_url": "",
-    "emoji": "📱",
-    "gradient": "linear-gradient(135deg, #2c3e50, #4a6a8a)",
-    "tag": "iPhone"
+    "tag": "Музыка-ДТП",
+    "emotional_tone": "surprising",
+    "views": 2600
   }
 ]
