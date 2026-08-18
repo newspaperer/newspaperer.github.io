@@ -2,70 +2,367 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Newspaperer · Лента новостей</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Лента · Telegram</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif; background: #f2f2f7; color: #000; padding: 0; margin: 0; min-height: 100vh; }
-        .feed-header { padding: 16px 20px 14px; background: rgba(242, 242, 247, 0.7); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border-bottom: 0.5px solid rgba(60, 60, 67, 0.08); position: sticky; top: 0; z-index: 10; }
-        .feed-header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; background: linear-gradient(145deg, #1c1c1e, #3a3a3c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .feed-header .sub { font-size: 15px; font-weight: 400; color: #8e8e93; margin-top: 2px; letter-spacing: -0.2px; }
-        .feed-container { max-width: 600px; margin: 0 auto; padding: 12px 16px 40px; display: flex; flex-direction: column; gap: 18px; }
-        .post-card { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 28px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02); border: 0.5px solid rgba(255, 255, 255, 0.6); overflow: hidden; transition: transform 0.15s ease, box-shadow 0.2s ease; }
-        .post-card:active { transform: scale(0.985); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
-        .post-cover { width: 100%; aspect-ratio: 16 / 10; background: #d9d9e3; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; }
-        .post-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .cover-placeholder { font-size: 48px; font-weight: 700; color: rgba(255, 255, 255, 0.85); text-shadow: 0 2px 12px rgba(0,0,0,0.15); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
-        .post-meta { padding: 14px 18px 10px 18px; display: flex; align-items: center; gap: 12px; }
-        .avatar { width: 38px; height: 38px; border-radius: 50%; background: #007aff; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 16px; color: white; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2); }
-        .avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
-        .channel-info { display: flex; flex-direction: column; flex: 1; }
-        .channel-name { font-size: 16px; font-weight: 600; line-height: 1.2; color: #1c1c1e; }
-        .channel-sub { font-size: 13px; font-weight: 400; color: #8e8e93; letter-spacing: -0.2px; }
-        .post-time { font-size: 13px; color: #8e8e93; margin-left: auto; white-space: nowrap; }
-        .post-body { padding: 0 18px 16px 18px; }
-        .post-title { font-size: 17px; font-weight: 620; line-height: 1.35; margin-bottom: 6px; color: #1c1c1e; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .post-description { font-size: 15px; font-weight: 400; line-height: 1.45; color: #3a3a3c; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; opacity: 0.85; }
-        .news-tag { display: inline-block; font-size: 11px; font-weight: 600; color: #007aff; background: rgba(0, 122, 255, 0.1); padding: 2px 10px; border-radius: 12px; margin-top: 4px; letter-spacing: 0.3px; }
-        .loader-trigger { height: 60px; display: flex; align-items: center; justify-content: center; color: #8e8e93; font-size: 14px; font-weight: 500; letter-spacing: 0.3px; margin-top: 8px; transition: opacity 0.2s; }
-        .loader-trigger .spinner { display: inline-block; width: 20px; height: 20px; border: 2.5px solid rgba(142, 142, 147, 0.2); border-top-color: #007aff; border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 12px; }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .loader-trigger.hidden { opacity: 0; pointer-events: none; }
-        @media (max-width: 480px) { .feed-header h1 { font-size: 24px; } .post-card { border-radius: 24px; } .post-cover { aspect-ratio: 16 / 11; } }
+        body {
+            font-family: -apple-system, 'Helvetica Neue', sans-serif;
+            background: #f0f2f5;
+            color: #000;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .feed-header {
+            padding: 12px 16px;
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .feed-header h1 { font-size: 20px; font-weight: 700; color: #1c1c1e; }
+        .feed-header .sub { font-size: 14px; color: #8e8e93; }
+
+        .feed-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 12px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .post-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 12px 14px 10px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+        .post-card:active { transform: scale(0.98); }
+
+        .post-title {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #1c1c1e;
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-description {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #3a3a3c;
+            margin-bottom: 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-cover {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 8px;
+            background: #d9d9e3;
+            margin: 8px 0 6px;
+            overflow: hidden;
+        }
+        .post-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px solid #f0f0f0;
+        }
+        .post-views { font-size: 13px; color: #8e8e93; }
+
+        .post-reactions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .reaction-bubble {
+            background: #f0f2f5;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .reaction-bubble:hover { background: #e0e0e0; }
+        .reaction-bubble .count { color: #8e8e93; font-weight: 500; }
+
+        .channel-feed {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 200;
+            overflow-y: auto;
+            padding: 60px 12px 20px;
+        }
+        .channel-feed.active { display: block; }
+        .channel-feed .close-btn {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            padding: 12px 0;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
         @media (prefers-color-scheme: dark) {
             body { background: #000; }
-            .feed-header { background: rgba(0, 0, 0, 0.8); border-bottom: 0.5px solid rgba(255, 255, 255, 0.08); }
-            .feed-header h1 { background: linear-gradient(145deg, #f2f2f7, #b0b0b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-            .feed-header .sub { color: #8e8e93; }
-            .post-card { background: rgba(28, 28, 30, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 0.5px solid rgba(255, 255, 255, 0.06); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); }
-            .channel-name { color: #f2f2f7; }
-            .channel-sub, .post-time { color: #8e8e93; }
+            .feed-header { background: #1c1c1e; border-bottom: 1px solid #2c2c2e; }
+            .feed-header h1 { color: #f2f2f7; }
+            .post-card { background: #1c1c1e; }
             .post-title { color: #f2f2f7; }
             .post-description { color: #b0b0b8; }
-            .post-cover { background: #2c2c2e; }
-            .cover-placeholder { background: linear-gradient(135deg, #3a3a3c, #1c1c1e); }
+            .post-footer { border-top: 1px solid #2c2c2e; }
+            .reaction-bubble { background: #2c2c2e; }
+            .reaction-bubble .count { color: #8e8e93; }
+            .channel-feed { background: #000; }
+            .channel-feed .close-btn { background: #1c1c1e; border-bottom: 1px solid #2c2c2e; }
         }
     </style>
 </head>
 <body>
+
     <header class="feed-header">
-        <h1>Newspaperer</h1>
-        <div class="sub">Лента · Август 2026</div>
+        <h1>Лента</h1>
+        <div class="sub">Подписки · Рекомендации</div>
     </header>
+
     <div id="feed" class="feed-container">
-        <div id="loaderTrigger" class="loader-trigger">
-            <span class="spinner"></span>
-            <span>Загрузка новостей...</span>
+        <div id="loaderTrigger" style="height:40px;display:flex;align-items:center;justify-content:center;color:#8e8e93;font-size:14px;">
+            Загрузка...
         </div>
     </div>
 
     <script>
+        // ===== ЗАГРУЗКА ДАННЫХ =====
         const GITHUB_USER = 'newspaperer';
         const REPO_NAME = 'newspaperer.github.io';
         const NEWS_URL = `https://raw.githubusercontent.com/${GITHUB_USER}/${REPO_NAME}/main/news.json`;
 
         let allPosts = [];
         let postPool = [];
+        let userReactions = JSON.parse(localStorage.getItem('userReactions')) || {};
+        let topicScores = JSON.parse(localStorage.getItem('topicScores')) || {};
+
+        const feed = document.getElementById('feed');
+        const loaderTrigger = document.getElementById('loaderTrigger');
+
+        // ===== ГЕНЕРАЦИЯ РЕАКЦИЙ НА ОСНОВЕ ТОНА =====
+        function generateReactions(tone) {
+            const toneMap = {
+                'absurd': { '🤡': 482, '🤣': 162, '🤔': 23, '💩': 23, '🤢': 12, '🤩': 5, '👍': 3, '🔥': 2 },
+                'serious': { '👍': 326, '🤣': 21, '🔥': 10, '👏': 8, '😭': 6, '🤩': 6, '🎉': 3, '💩': 2 },
+                'exciting': { '🤯': 438, '😭': 88, '❤': 58, '😁': 35, '🗿': 24, '👍': 11 },
+                'negative': { '❤': 266, '👍': 21, '🤣': 18, '😭': 7, '😎': 5, '🔥': 2 },
+                'scandal': { '❤': 691, '🤡': 249, '🤬': 37, '🕊': 25 },
+                'positive': { '👍': 55, '😁': 25, '❤': 18, '🔥': 10 },
+                'surprising': { '😱': 25, '🍺': 7, '👍': 5, '😁': 5, '❤': 2, '🔥': 1 }
+            };
+            return toneMap[tone] || { '👍': 40, '❤': 30, '🔥': 10 };
+        }
+
+        // ===== СОЗДАНИЕ КАРТОЧКИ =====
+        function createPost(data) {
+            const post = document.createElement('div');
+            post.className = 'post-card';
+            post.dataset.id = data.id;
+            post.dataset.tag = data.tag;
+            post.dataset.source = data.source.name;
+
+            // Тайтл
+            const title = document.createElement('div');
+            title.className = 'post-title';
+            title.textContent = data.title;
+            post.appendChild(title);
+
+            // Описание
+            const desc = document.createElement('div');
+            desc.className = 'post-description';
+            desc.textContent = data.description;
+            post.appendChild(desc);
+
+            // Обложка
+            if (data.image_url) {
+                const cover = document.createElement('div');
+                cover.className = 'post-cover';
+                const img = document.createElement('img');
+                img.src = data.image_url;
+                cover.appendChild(img);
+                post.appendChild(cover);
+            }
+
+            // Реакции
+            const footer = document.createElement('div');
+            footer.className = 'post-footer';
+
+            const views = document.createElement('div');
+            views.className = 'post-views';
+            views.textContent = `👁 ${data.views.toLocaleString()}`;
+            footer.appendChild(views);
+
+            const reactionsContainer = document.createElement('div');
+            reactionsContainer.className = 'post-reactions';
+
+            let reactions = generateReactions(data.emotional_tone);
+            // Если пользователь уже ставил реакции на этот пост, восстанавливаем их
+            if (userReactions[data.id]) {
+                reactions = userReactions[data.id];
+            }
+
+            for (const [emoji, count] of Object.entries(reactions)) {
+                const bubble = document.createElement('div');
+                bubble.className = 'reaction-bubble';
+                bubble.dataset.emoji = emoji;
+                bubble.dataset.postId = data.id;
+                bubble.innerHTML = `${emoji} <span class="count">${count}</span>`;
+
+                bubble.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const postId = this.dataset.postId;
+                    const emoji = this.dataset.emoji;
+                    const countSpan = this.querySelector('.count');
+                    let current = parseInt(countSpan.textContent);
+
+                    if (!userReactions[postId]) userReactions[postId] = {};
+                    if (!userReactions[postId][emoji]) userReactions[postId][emoji] = 0;
+
+                    if (userReactions[postId][emoji] > 0) {
+                        // Уже поставил — убираем
+                        userReactions[postId][emoji]--;
+                        countSpan.textContent = current - 1;
+                    } else {
+                        // Ставим
+                        userReactions[postId][emoji]++;
+                        countSpan.textContent = current + 1;
+                    }
+
+                    // Обновляем оценки тем
+                    const tag = document.querySelector(`.post-card[data-id="${postId}"]`).dataset.tag;
+                    if (!topicScores[tag]) topicScores[tag] = 0;
+                    topicScores[tag] += 1;
+
+                    localStorage.setItem('userReactions', JSON.stringify(userReactions));
+                    localStorage.setItem('topicScores', JSON.stringify(topicScores));
+                });
+
+                reactionsContainer.appendChild(bubble);
+            }
+
+            footer.appendChild(reactionsContainer);
+            post.appendChild(footer);
+
+            // Клик по посту — открывает ленту канала
+            post.addEventListener('click', function() {
+                const sourceName = this.dataset.source;
+                openChannelFeed(sourceName);
+            });
+
+            return post;
+        }
+
+        // ===== ЛЕНТА КАНАЛА =====
+        function openChannelFeed(sourceName) {
+            const channelPosts = allPosts.filter(p => p.source.name === sourceName).sort((a,b) => b.id - a.id);
+
+            const channelDiv = document.createElement('div');
+            channelDiv.className = 'channel-feed active';
+            channelDiv.id = 'channelFeed';
+
+            const closeBtn = document.createElement('div');
+            closeBtn.className = 'close-btn';
+            closeBtn.innerHTML = `‹ <span>Назад</span>`;
+            closeBtn.addEventListener('click', function() {
+                document.getElementById('channelFeed').remove();
+            });
+            channelDiv.appendChild(closeBtn);
+
+            const title = document.createElement('h2');
+            title.textContent = sourceName;
+            title.style.padding = '12px 0 8px';
+            title.style.fontSize = '22px';
+            title.style.fontWeight = '700';
+            channelDiv.appendChild(title);
+
+            channelPosts.forEach(postData => {
+                const post = createPost(postData);
+                // в ленте канала клик на пост не открывает другую ленту
+                post.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+                channelDiv.appendChild(post);
+            });
+
+            document.body.appendChild(channelDiv);
+        }
+
+        // ===== ЗАГРУЗКА И СОРТИРОВКА =====
+        function loadInitial() {
+            // Сортируем с учётом оценок тем
+            let sorted = [...allPosts];
+            sorted.sort((a,b) => {
+                const scoreA = topicScores[a.tag] || 0;
+                const scoreB = topicScores[b.tag] || 0;
+                return scoreB - scoreA;
+            });
+
+            const initial = sorted.slice(0, 8);
+            initial.forEach(postData => {
+                const post = createPost(postData);
+                feed.insertBefore(post, loaderTrigger);
+            });
+            postPool = sorted.slice(8);
+        }
+
+        function loadMorePosts() {
+            const count = 2 + Math.floor(Math.random() * 3);
+            for (let i = 0; i < count; i++) {
+                if (postPool.length === 0) {
+                    postPool = shuffleArray([...allPosts]);
+                }
+                const postData = postPool.pop();
+                if (postData) {
+                    const post = createPost(postData);
+                    feed.insertBefore(post, loaderTrigger);
+                }
+            }
+        }
 
         function shuffleArray(arr) {
             for (let i = arr.length - 1; i > 0; i--) {
@@ -75,134 +372,27 @@
             return arr;
         }
 
-        function createPost(data) {
-            const post = document.createElement('div');
-            post.className = 'post-card';
-
-            const cover = document.createElement('div');
-            cover.className = 'post-cover';
-            if (data.image_url) {
-                const img = document.createElement('img');
-                img.src = data.image_url;
-                img.alt = data.title;
-                cover.appendChild(img);
-            } else {
-                const placeholder = document.createElement('div');
-                placeholder.className = 'cover-placeholder';
-                placeholder.style.background = data.gradient || 'linear-gradient(135deg, #8e8e93, #636366)';
-                placeholder.textContent = data.emoji || '📰';
-                cover.appendChild(placeholder);
-            }
-            post.appendChild(cover);
-
-            const meta = document.createElement('div');
-            meta.className = 'post-meta';
-
-            const avatar = document.createElement('div');
-            avatar.className = 'avatar';
-            if (data.source.avatar_url) {
-                const img = document.createElement('img');
-                img.src = data.source.avatar_url;
-                avatar.appendChild(img);
-            } else {
-                avatar.style.background = data.source.color || '#007aff';
-                avatar.textContent = data.source.nick || '📰';
-            }
-
-            const info = document.createElement('div');
-            info.className = 'channel-info';
-            const name = document.createElement('span');
-            name.className = 'channel-name';
-            name.textContent = data.source.name;
-            const sub = document.createElement('span');
-            sub.className = 'channel-sub';
-            sub.textContent = data.source.sub || 'Источник';
-            info.appendChild(name);
-            info.appendChild(sub);
-
-            const timeEl = document.createElement('span');
-            timeEl.className = 'post-time';
-            const now = new Date();
-            timeEl.textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
-
-            meta.appendChild(avatar);
-            meta.appendChild(info);
-            meta.appendChild(timeEl);
-            post.appendChild(meta);
-
-            const body = document.createElement('div');
-            body.className = 'post-body';
-            const t = document.createElement('div');
-            t.className = 'post-title';
-            t.textContent = data.title;
-            const d = document.createElement('div');
-            d.className = 'post-description';
-            d.textContent = data.description;
-            body.appendChild(t);
-            body.appendChild(d);
-            if (data.tag) {
-                const tag = document.createElement('span');
-                tag.className = 'news-tag';
-                tag.textContent = data.tag;
-                body.appendChild(tag);
-            }
-            post.appendChild(body);
-            return post;
-        }
-
-        const feed = document.getElementById('feed');
-        const loaderTrigger = document.getElementById('loaderTrigger');
-
-        function loadInitial() {
-            const shuffled = shuffleArray([...allPosts]);
-            const initial = shuffled.slice(0, 6);
-            initial.forEach(postData => {
-                const post = createPost(postData);
-                feed.insertBefore(post, loaderTrigger);
-            });
-            postPool = shuffled.slice(6);
-        }
-
-        function loadMorePosts() {
-            loaderTrigger.querySelector('span:last-child').textContent = 'Загрузка...';
-            setTimeout(() => {
-                const count = 2 + Math.floor(Math.random() * 3);
-                for (let i = 0; i < count; i++) {
-                    if (postPool.length === 0) {
-                        postPool = shuffleArray([...allPosts]);
-                    }
-                    const postData = postPool.pop();
-                    if (postData) {
-                        const post = createPost(postData);
-                        feed.insertBefore(post, loaderTrigger);
-                    }
-                }
-                loaderTrigger.querySelector('span:last-child').textContent = 'Ещё новости · прокрутите вниз';
-            }, 500);
-        }
-
+        // ===== НАБЛЮДАТЕЛЬ =====
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    loadMorePosts();
-                }
+                if (entry.isIntersecting) loadMorePosts();
             });
         }, { rootMargin: '0px 0px 200px 0px' });
         observer.observe(loaderTrigger);
 
+        // ===== ЗАПУСК =====
         async function loadNews() {
             try {
                 const response = await fetch(NEWS_URL);
-                if (!response.ok) throw new Error('Ошибка загрузки');
                 allPosts = await response.json();
                 loadInitial();
             } catch (error) {
-                console.error('Ошибка:', error);
-                feed.innerHTML = '<p style="text-align:center;color:#8e8e93;padding:40px;">Не удалось загрузить новости. Проверьте файл news.json</p>';
+                console.error('Ошибка загрузки:', error);
+                feed.innerHTML = '<p style="text-align:center;color:#8e8e93;padding:40px;">Не удалось загрузить новости</p>';
             }
         }
 
         loadNews();
     </script>
 </body>
-  </html>
+</html>
