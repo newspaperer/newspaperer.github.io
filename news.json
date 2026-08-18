@@ -178,5 +178,24 @@
     "tag": "Спорт",
     "views": 14300,
     "category": "спорт"
+  },
+  
+  {
+    "id": 11,
+    "source": {
+      "name": "Срочно, Сейчас",
+      "nick": "emergency_now",
+      "avatar_url": "",
+      "color": "#0088cc",
+      "sub": "Политика"
+    },
+    "title": "Я получаю удачные сигналы — трамп",
+    "description": "да эта так.",
+    "image_url": "https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=600",
+    "emoji": "📰",
+    "gradient": "linear-gradient(135deg, #0088cc, #00aaff)",
+    "tag": "ну типо да новостьь78 не 433",
+    "views": 16800,
+    "category": "политика"
   }
 ]
