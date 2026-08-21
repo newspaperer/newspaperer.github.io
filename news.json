@@ -1,12 +1,7 @@
+[
   {
-    "id": 21,
-    "source": {
-      "name": "Шоу-бизнес",
-      "nick": "show_biz",
-      "avatar_url": "",
-      "color": "#e91e63",
-      "sub": "Светская хроника"
-    },
+    "id": 1,
+    "source": { "name": "Шоу-бизнес", "nick": "show_biz", "avatar_url": "", "color": "#e91e63", "sub": "Светская хроника" },
     "title": "Ольга Бузова призналась в отношениях с рэпером Toxi$",
     "description": "Певица подтвердила слухи в прямом эфире, назвав Toxi$ «своим человеком».",
     "image_url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
@@ -17,14 +12,8 @@
     "category": "шоу-бизнес"
   },
   {
-    "id": 22,
-    "source": {
-      "name": "Газета.Ru",
-      "nick": "gazetaru",
-      "avatar_url": "",
-      "color": "#e91e63",
-      "sub": "СМИ"
-    },
+    "id": 2,
+    "source": { "name": "Газета.Ru", "nick": "gazetaru", "avatar_url": "", "color": "#e91e63", "sub": "СМИ" },
     "title": "В Санкт-Петербурге открылся фестиваль «Алые паруса»",
     "description": "Грандиозный праздник выпускников прошёл в акватории Невы. Зрители увидели шоу с пиротехникой.",
     "image_url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=600",
@@ -35,14 +24,8 @@
     "category": "культура"
   },
   {
-    "id": 23,
-    "source": {
-      "name": "Лента.ру",
-      "nick": "lenta",
-      "avatar_url": "",
-      "color": "#283593",
-      "sub": "СМИ"
-    },
+    "id": 3,
+    "source": { "name": "Лента.ру", "nick": "lenta", "avatar_url": "", "color": "#283593", "sub": "СМИ" },
     "title": "В России создали первый в мире искусственный интеллект для врачей",
     "description": "Нейросеть диагностирует заболевания по снимкам МРТ с точностью 97%.",
     "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600",
@@ -53,14 +36,8 @@
     "category": "наука"
   },
   {
-    "id": 24,
-    "source": {
-      "name": "Автоновости",
-      "nick": "auto_news",
-      "avatar_url": "",
-      "color": "#e65100",
-      "sub": "Авто"
-    },
+    "id": 4,
+    "source": { "name": "Автоновости", "nick": "auto_news", "avatar_url": "", "color": "#e65100", "sub": "Авто" },
     "title": "Lada представила новый седан Vesta с улучшенным двигателем",
     "description": "Новая Vesta получила 1.8-литровый мотор мощностью 125 л.с. и обновлённую мультимедиа.",
     "image_url": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600",
@@ -71,14 +48,8 @@
     "category": "авто"
   },
   {
-    "id": 25,
-    "source": {
-      "name": "Погода 24",
-      "nick": "weather24",
-      "avatar_url": "",
-      "color": "#f39c12",
-      "sub": "Погода"
-    },
+    "id": 5,
+    "source": { "name": "Погода 24", "nick": "weather24", "avatar_url": "", "color": "#f39c12", "sub": "Погода" },
     "title": "В Москве установлен рекорд жары за последние 100 лет",
     "description": "Температура воздуха достигла +32°C. Побит рекорд 1926 года.",
     "image_url": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600",
@@ -89,14 +60,8 @@
     "category": "погода"
   },
   {
-    "id": 26,
-    "source": {
-      "name": "Москва 24",
-      "nick": "msk24",
-      "avatar_url": "",
-      "color": "#d32f2f",
-      "sub": "Происшествия"
-    },
+    "id": 6,
+    "source": { "name": "Москва 24", "nick": "msk24", "avatar_url": "", "color": "#d32f2f", "sub": "Происшествия" },
     "title": "В центре Москвы загорелось здание Министерства",
     "description": "Пожар произошёл в административном здании на Арбате. Все эвакуированы, пострадавших нет.",
     "image_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600",
@@ -107,14 +72,8 @@
     "category": "происшествия"
   },
   {
-    "id": 27,
-    "source": {
-      "name": "РБК",
-      "nick": "rbc",
-      "avatar_url": "",
-      "color": "#e65100",
-      "sub": "Экономика"
-    },
+    "id": 7,
+    "source": { "name": "РБК", "nick": "rbc", "avatar_url": "", "color": "#e65100", "sub": "Экономика" },
     "title": "Российские туристы стали чаще выбирать Турцию и Египет",
     "description": "Направления показали рост спроса на 20% по сравнению с прошлым годом.",
     "image_url": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600",
@@ -125,14 +84,8 @@
     "category": "экономика"
   },
   {
-    "id": 28,
-    "source": {
-      "name": "Газета.Ru",
-      "nick": "gazetaru",
-      "avatar_url": "",
-      "color": "#e91e63",
-      "sub": "СМИ"
-    },
+    "id": 8,
+    "source": { "name": "Газета.Ru", "nick": "gazetaru", "avatar_url": "", "color": "#e91e63", "sub": "СМИ" },
     "title": "Певица Слава вернулась к алкоголю после 5 месяцев трезвости",
     "description": "46-летняя артистка призналась, что нарушила обещание, данное подписчикам.",
     "image_url": "https://images.unsplash.com/photo-1493225255756-9587f71e3dd7?w=600",
@@ -143,14 +96,8 @@
     "category": "шоу-бизнес"
   },
   {
-    "id": 29,
-    "source": {
-      "name": "Известия",
-      "nick": "izvestia",
-      "avatar_url": "",
-      "color": "#00838f",
-      "sub": "СМИ"
-    },
+    "id": 9,
+    "source": { "name": "Известия", "nick": "izvestia", "avatar_url": "", "color": "#00838f", "sub": "СМИ" },
     "title": "В России отменят обязательную сдачу ЕГЭ по иностранному языку",
     "description": "Минпросвещения планирует сделать экзамен по английскому языку выборным для выпускников.",
     "image_url": "https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=600",
@@ -158,17 +105,11 @@
     "gradient": "linear-gradient(135deg, #00838f, #26c6da)",
     "tag": "Общество",
     "views": 12400,
-    "category": "политика"
+    "category": "общество"
   },
   {
-    "id": 30,
-    "source": {
-      "name": "Новости спорта",
-      "nick": "sport_news",
-      "avatar_url": "",
-      "color": "#1565c0",
-      "sub": "Спорт"
-    },
+    "id": 10,
+    "source": { "name": "Новости спорта", "nick": "sport_news", "avatar_url": "", "color": "#1565c0", "sub": "Спорт" },
     "title": "Российский теннисист вышел в финал US Open",
     "description": "Матч продлился 3 часа 20 минут и закончился со счётом 3:1 по сетам.",
     "image_url": "https://images.unsplash.com/photo-1579460416542-c7bfbd1cd919?w=600",
@@ -179,14 +120,8 @@
     "category": "спорт"
   },
   {
-    "id": 31,
-    "source": {
-      "name": "МВД России",
-      "nick": "mvd",
-      "avatar_url": "",
-      "color": "#d32f2f",
-      "sub": "Происшествия"
-    },
+    "id": 11,
+    "source": { "name": "МВД России", "nick": "mvd", "avatar_url": "", "color": "#d32f2f", "sub": "Происшествия" },
     "title": "В Санкт-Петербурге раскрыли кражу века: похищено 50 млн рублей",
     "description": "Группа мошенников проникла в банк через подземный ход, но была задержана.",
     "image_url": "https://images.unsplash.com/photo-1543165362-7d28d6e59307?w=600",
@@ -197,14 +132,8 @@
     "category": "происшествия"
   },
   {
-    "id": 32,
-    "source": {
-      "name": "Яндекс.Погода",
-      "nick": "yandex_weather",
-      "avatar_url": "",
-      "color": "#f39c12",
-      "sub": "Погода"
-    },
+    "id": 12,
+    "source": { "name": "Яндекс.Погода", "nick": "yandex_weather", "avatar_url": "", "color": "#f39c12", "sub": "Погода" },
     "title": "В Краснодаре ожидается наводнение из-за сильных ливней",
     "description": "МЧС объявило экстренное предупреждение. Уровень воды в реках может подняться на 2 метра.",
     "image_url": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600",
@@ -215,122 +144,8 @@
     "category": "происшествия"
   },
   {
-    "id": 33,
-    "source": {
-      "name": "ТАСС",
-      "nick": "tass",
-      "avatar_url": "",
-      "color": "#d32f2f",
-      "sub": "СМИ"
-    },
-    "title": "В Москве прошел парад Победы в честь 81-й годовщины",
-    "description": "В мероприятии приняли участие войска различных родов и прохождение военной техники.",
-    "image_url": "https://images.unsplash.com/photo-1541872707-1bfbc7b49940?w=600",
-    "emoji": "🎖️",
-    "gradient": "linear-gradient(135deg, #d32f2f, #f44336)",
-    "tag": "Политика",
-    "views": 27200,
-    "category": "политика"
-  },
-  {
-    "id": 34,
-    "source": {
-      "name": "Газета.Ru",
-      "nick": "gazetaru",
-      "avatar_url": "",
-      "color": "#e91e63",
-      "sub": "СМИ"
-    },
-    "title": "Новый фильм с Александром Петровым выходит в прокат в сентябре",
-    "description": "Фильм «Последний герой» уже получил положительные отзывы на кинофестивале.",
-    "image_url": "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=600",
-    "emoji": "🎬",
-    "gradient": "linear-gradient(135deg, #e91e63, #f06292)",
-    "tag": "Кино",
-    "views": 8900,
-    "category": "шоу-бизнес"
-  },
-  {
-    "id": 35,
-    "source": {
-      "name": "Автоновости",
-      "nick": "auto_news",
-      "avatar_url": "",
-      "color": "#e65100",
-      "sub": "Авто"
-    },
-    "title": "Новая Toyota Camry получила гибридный двигатель",
-    "description": "Модель 2026 года будет доступна как в бензиновой, так и в гибридной версии.",
-    "image_url": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600",
-    "emoji": "🚗",
-    "gradient": "linear-gradient(135deg, #e65100, #ff9800)",
-    "tag": "Авто",
-    "views": 12800,
-    "category": "авто"
-  },
-  {
-    "id": 36,
-    "source": {
-      "name": "Чемпионат",
-      "nick": "championat",
-      "avatar_url": "",
-      "color": "#1565c0",
-      "sub": "Спорт"
-    },
-    "title": "КХЛ: новый сезон стартует в сентябре с Кубком Открытия",
-    "description": "Матч за Кубок Открытия между ЦСКА и СКА пройдёт 2 сентября в Москве.",
-    "image_url": "https://images.unsplash.com/photo-1560075008-f5a31c68b33e?w=600",
-    "emoji": "🏒",
-    "gradient": "linear-gradient(135deg, #1565c0, #42a5f5)",
-    "tag": "Спорт",
-    "views": 5400,
-    "category": "спорт"
-  },
-  {
-    "id": 37,
-    "source": {
-      "name": "Москва 24",
-      "nick": "msk24",
-      "avatar_url": "",
-      "color": "#d32f2f",
-      "sub": "Происшествия"
-    },
-    "title": "В Москве произошло массовое ДТП на МКАД с участием 8 машин",
-    "description": "Пострадали 5 человек. На месте работают сотрудники ГИБДД и МЧС.",
-    "image_url": "https://images.unsplash.com/photo-1594237584314-7e73ba4e60de?w=600",
-    "emoji": "🚗",
-    "gradient": "linear-gradient(135deg, #d32f2f, #f44336)",
-    "tag": "Происшествия",
-    "views": 19500,
-    "category": "происшествия"
-  },
-  {
-    "id": 38,
-    "source": {
-      "name": "ТАСС",
-      "nick": "tass",
-      "avatar_url": "",
-      "color": "#d32f2f",
-      "sub": "СМИ"
-    },
-    "title": "Путин встретился с президентом Беларуси в Минске",
-    "description": "Лидеры обсудили вопросы сотрудничества и интеграции в рамках Союзного государства.",
-    "image_url": "https://images.unsplash.com/photo-1541872707-1bfbc7b49940?w=600",
-    "emoji": "🤝",
-    "gradient": "linear-gradient(135deg, #d32f2f, #f44336)",
-    "tag": "Политика",
-    "views": 11200,
-    "category": "политика"
-  },
-  {
-    "id": 39,
-    "source": {
-      "name": "Кинопоиск",
-      "nick": "kinopoisk",
-      "avatar_url": "",
-      "color": "#283593",
-      "sub": "Кино"
-    },
+    "id": 13,
+    "source": { "name": "Кинопоиск", "nick": "kinopoisk", "avatar_url": "", "color": "#283593", "sub": "Кино" },
     "title": "В России выходит фильм «Майор Гром: Игра»",
     "description": "Премьера ожидается в октябре. В главной роли — Тихон Жизневский.",
     "image_url": "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=600",
@@ -341,14 +156,56 @@
     "category": "шоу-бизнес"
   },
   {
-    "id": 40,
-    "source": {
-      "name": "РБК",
-      "nick": "rbc",
-      "avatar_url": "",
-      "color": "#e65100",
-      "sub": "Экономика"
-    },
+    "id": 14,
+    "source": { "name": "Газета.Ru", "nick": "gazetaru", "avatar_url": "", "color": "#e91e63", "sub": "СМИ" },
+    "title": "Новый фильм с Александром Петровым выходит в прокат в сентябре",
+    "description": "Фильм «Последний герой» уже получил положительные отзывы на кинофестивале.",
+    "image_url": "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=600",
+    "emoji": "🎬",
+    "gradient": "linear-gradient(135deg, #e91e63, #f06292)",
+    "tag": "Кино",
+    "views": 8900,
+    "category": "шоу-бизнес"
+  },
+  {
+    "id": 15,
+    "source": { "name": "Автоновости", "nick": "auto_news", "avatar_url": "", "color": "#e65100", "sub": "Авто" },
+    "title": "Новая Toyota Camry получила гибридный двигатель",
+    "description": "Модель 2026 года будет доступна как в бензиновой, так и в гибридной версии.",
+    "image_url": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600",
+    "emoji": "🚗",
+    "gradient": "linear-gradient(135deg, #e65100, #ff9800)",
+    "tag": "Авто",
+    "views": 12800,
+    "category": "авто"
+  },
+  {
+    "id": 16,
+    "source": { "name": "Чемпионат", "nick": "championat", "avatar_url": "", "color": "#1565c0", "sub": "Спорт" },
+    "title": "КХЛ: новый сезон стартует в сентябре с Кубком Открытия",
+    "description": "Матч за Кубок Открытия между ЦСКА и СКА пройдёт 2 сентября в Москве.",
+    "image_url": "https://images.unsplash.com/photo-1560075008-f5a31c68b33e?w=600",
+    "emoji": "🏒",
+    "gradient": "linear-gradient(135deg, #1565c0, #42a5f5)",
+    "tag": "Спорт",
+    "views": 5400,
+    "category": "спорт"
+  },
+  {
+    "id": 17,
+    "source": { "name": "Москва 24", "nick": "msk24", "avatar_url": "", "color": "#d32f2f", "sub": "Происшествия" },
+    "title": "В Москве произошло массовое ДТП на МКАД с участием 8 машин",
+    "description": "Пострадали 5 человек. На месте работают сотрудники ГИБДД и МЧС.",
+    "image_url": "https://images.unsplash.com/photo-1594237584314-7e73ba4e60de?w=600",
+    "emoji": "🚗",
+    "gradient": "linear-gradient(135deg, #d32f2f, #f44336)",
+    "tag": "Происшествия",
+    "views": 19500,
+    "category": "происшествия"
+  },
+  {
+    "id": 18,
+    "source": { "name": "РБК", "nick": "rbc", "avatar_url": "", "color": "#e65100", "sub": "Экономика" },
     "title": "Курс доллара укрепился до 92 рублей после новостей о санкциях",
     "description": "Аналитики связывают рост валюты с новыми ограничениями со стороны Запада.",
     "image_url": "https://images.unsplash.com/photo-1563013544-7b49b3a1c0a3?w=600",
@@ -357,5 +214,29 @@
     "tag": "Экономика",
     "views": 9800,
     "category": "экономика"
+  },
+  {
+    "id": 19,
+    "source": { "name": "ТАСС", "nick": "tass", "avatar_url": "", "color": "#d32f2f", "sub": "СМИ" },
+    "title": "В Москве прошел фестиваль уличной еды",
+    "description": "На фестивале представили блюда из 20 стран мира. Главной темой стали азиатские уличные закуски.",
+    "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600",
+    "emoji": "🍜",
+    "gradient": "linear-gradient(135deg, #d32f2f, #f44336)",
+    "tag": "Культура",
+    "views": 13200,
+    "category": "культура"
+  },
+  {
+    "id": 20,
+    "source": { "name": "Яндекс.Погода", "nick": "yandex_weather", "avatar_url": "", "color": "#f39c12", "sub": "Погода" },
+    "title": "В Сочи открылся горнолыжный сезон",
+    "description": "Курорты Красной Поляны приняли первых туристов. Ожидается, что сезон продлится до мая.",
+    "image_url": "https://images.unsplash.com/photo-1527661591475-a527cb9d15e8?w=600",
+    "emoji": "⛷️",
+    "gradient": "linear-gradient(135deg, #f39c12, #e67e22)",
+    "tag": "Туризм",
+    "views": 7600,
+    "category": "туризм"
   }
 ]
