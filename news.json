@@ -13,8 +13,8 @@
   },
   {
     "id": 2,
-    "source": { "name": "Газета.Ru", "nick": "gazetaru", "avatar_url": "", "color": "#e91e63", "sub": "СМИ" },
-    "title": "В Санкт-Петербурге открылся фестиваль «Алые паруса»",
+    "source": { "name": "Газета.rjv", "nick": "gazetaru", "avatar_url": "", "color": "#e91e63", "sub": "СМИ" },
+    "title": "В Санкт-Петербурге открылся фестиваль «Алыеyngygnyпаруса»",
     "description": "Грандиозный праздник выпускников прошёл в акватории Невы. Зрители увидели шоу с пиротехникой.",
     "image_url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=600",
     "emoji": "⛵",
